@@ -19,12 +19,12 @@
 }
 
 .containermain {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  
   align-items: center;
-  justify-content: left;
-  margin-top: 2.5rem;
-  margin-right: 20rem;
+  justify-content: center;
+  margin-bottom: 28rem;
+  margin-left: 50.5rem;
 }
 
 .containerheader {
@@ -75,7 +75,6 @@ gap: 0rem;
 }
 
 .card {
-    display: flex;
     background-color: transparent;
     color: #fff;
     font-family: var(--font-family);
@@ -85,7 +84,6 @@ gap: 0rem;
 }
 
 .mint-spinner {
-    display: flex;
     width: 100%;
     max-width: 400px;
     max-height: 140px;
