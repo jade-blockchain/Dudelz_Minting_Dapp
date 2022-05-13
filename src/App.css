@@ -1,0 +1,190 @@
+.mint {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    padding-right: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 5rem;
+}
+
+.containermain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  margin-top: 20rem;
+  margin-right: 27rem;
+}
+
+.containerheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  justify-content: center;
+  overflow: hidden;
+  gap: 34rem;
+  background-color: rgb(173, 255, 239);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 960px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 25pt;
+}
+
+.tokens {
+  font-size: 40pt;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.main {
+display: flex;
+justify-content: center;
+gap: 0rem;
+}
+
+.card {
+    background-color: transparent;
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 1000 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+}
+
+.mint-spinner {
+    width: 100%;
+    max-width: 400px;
+    max-height: 140px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-left: 10px;
+  }
+  .mint-spinner .input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .mint-spinner .input-group-append,
+  .mint-spinner .input-group-prepend {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    flex: 0 0 60px;
+    padding-top: 5%;
+  }
+  .mint-spinner .input-group-append .btn,
+  .mint-spinner .input-group-prepend .btn {
+    width: 20px;
+    color: rgb(255, 255, 255);
+    height: 30px;
+    display: flex;
+    border: 0 none;
+    border-radius: 5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px !important;
+    transition: all 0.3s ease-out;
+    padding-top: 1rem;
+  }
+  .mint-spinner .input-group-append .btn:hover,
+  .mint-spinner .input-group-prepend .btn:hover {
+    color: #000 !important;
+    background-color: #a7a7a7 !important;
+  }
+  .mint-spinner .form-control {
+    color: rgb(0, 0, 0);
+    border: #000;
+    border-radius: 1rem;
+    font-size: 40px;
+    font-weight: 700;
+    box-shadow: none;
+    text-align: center;
+    background-color: transparent !important;
+    max-width: calc(100% - 120px);
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgb(162, 112, 255);
+    color: #ffffff;
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    box-shadow: var(--header-shadow);
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    border-radius: 2rem;
+  }
+
+  .btn:disabled {
+    cursor: default;
+  }
+  
+  .wallet-btn {
+    background-image: url("images/connect.png");
+    margin-left: 2rem;
+    border-color: #000;
+    box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
+  }
+
+  .mint-btn {
+    background-image: url("images/mint.png");
+    width: 400px;
+    height: 171px;
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-left: 1rem;
+    margin-top: 5rem;
+    border-color: #000;
+    box-shadow: 10px 10px 10px 0px rgb(0, 0, 0);
+  }
+  
+  @media (max-width: 640px) {
+    .mint-spinner {
+      width: 70%;
+      max-width: 70%;
+    }
+  }
+
