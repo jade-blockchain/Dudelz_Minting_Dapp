@@ -1086,6 +1086,7 @@ function App() {
 
    
   return (
+	<body>
 	<header>
 	<div class="containerheader">
 	  <div class="logo">
@@ -1096,31 +1097,10 @@ function App() {
 		  <img src={logo} alt="dudelzlogo" width="182" height="84" />
 	  </div>
 	  <div class="menu">
-		<a
-		  href="https://discord.gg/dvZKCq96Rg"
-		  target="_blank"
-		  rel="noopener noreferrer"
-		>
-		  <img src={Discord} alt="Discord" />
-		</a>
-		<a
-		  href="https://twitter.com/BHL_NFT"
-		  target="_blank"
-		  rel="noopener noreferrer"
-		>
-		  <img src={Twitter} alt="Twitter" />
-		</a>
-		<a
-		  href="https://opensea.io/collection/bounty-hunters-lodge"
-		  target="_blank"
-		  rel="noopener noreferrer"
-		>
-		  <img src={Instagram} alt="Instagram" />
-		</a>
 		<button class="wallet-btn btn" onClick={connectwallet} id="connectWallet"></button>
 	  </div>
 	</div>
-	  <div class="bg_image" style={{ backgroundImage: 'url('+bg+')', display: "flex", backgroundSize: "cover", height: "160vh", color: "#FFFFFF"}}>
+	  </header>
           <div class="container">
               <StyledLogo src={logo} />
           <div class="containermain" style={{
@@ -1149,8 +1129,7 @@ function App() {
             </div>
           </div>
          </div>
-      </div>
-	  </header>
+		 </body>
        );
   }
 
