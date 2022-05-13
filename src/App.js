@@ -1120,7 +1120,7 @@ function App() {
 		<button class="wallet-btn btn" onClick={connectwallet} id="connectWallet"></button>
 	  </div>
 	</div>
-	  <div class="bg_image" style={{ backgroundImage: 'url('+bg+')', backgroundSize: "cover", height: "160vh", color: "#FFFFFF"}}>
+	  <div class="bg_image" style={{ backgroundImage: 'url('+bg+')', display: "flex", backgroundSize: "cover", height: "160vh", color: "#FFFFFF"}}>
           <div class="container">
               <StyledLogo src={logo} />
           <div class="containermain" style={{
