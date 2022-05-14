@@ -6,14 +6,11 @@ import styled from "styled-components";
 import MetaMaskOnboarding from '@metamask/onboarding';
 import Web3 from "web3";
 import './App.css';
-import bg from "./images/Background.png";
 import logo from "./images/Dudelz_logo.png";
-import logosmall from "./images/Logosmall.png";
+import logosmall from "./images/BHLDudelz_Logo.png";
 import minus from "./images/-Button.png";
 import plus from "./images/+Button.png";
-import Discord from "./images/header/discord.png";
-import Twitter from "./images/header/twitter.png";
-import Instagram from "./images/header/instagram.png";
+
 
 
 export const StyledLogo = styled.img`
@@ -1091,10 +1088,8 @@ function App() {
 	<div class="containerheader">
 	  <div class="logo">
 		<a href="https://bountyhunterslodge.com">
-		  <img src={logosmall} alt="logo" width="48" height="48" />
+		  <img src={logosmall} alt="logo" width="250" height="70" />
 		</a>
-		  <Heading4>+</Heading4>
-		  <img src={logo} alt="dudelzlogo" width="182" height="84" />
 	  </div>
 	  <div class="menu">
 		<button class="wallet-btn btn" onClick={connectwallet} id="connectWallet"></button>
@@ -1103,6 +1098,7 @@ function App() {
 	  </header>
           <div class="container">
               <StyledLogo src={logo} />
+		  </div>
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
               padding: 40,
@@ -1128,7 +1124,6 @@ function App() {
                 </div>
             </div>
           </div>
-         </div>
 		 </body>
        );
   }
