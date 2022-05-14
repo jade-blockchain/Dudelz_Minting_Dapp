@@ -1,7 +1,10 @@
 body {
-  background: url('images/Background.png') no-repeat;
-  background-size: 100% 100%; 
+  background-image: url('images/Background.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
   height: 150vh;
+  
 }
 
 /* HEADER */
@@ -29,6 +32,16 @@ header .containerheader {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* BODY */
+
 .mint {
     display: flex;
     flex: 1;
@@ -40,15 +53,16 @@ header .containerheader {
     padding-right: 1rem;
 }
 
-
-
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 1rem 2rem;
-  justify-content: center;
+  
 }
 
 .containermain {
@@ -56,70 +70,38 @@ header .containerheader {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 470px;
+
 }
 
-
-
-
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
-.price {
-  display: flex;
-  font-size: 25pt;
-}
-
-.tokens {
-  display: flex;
-  font-size: 40pt;
-  font-weight: 900;
-  margin-bottom: 1rem;
-}
-
-.main {
-display: flex;
-justify-content: center;
-gap: 0rem;
-}
-
-.card {
-    background-color: transparent;
-    color: #fff;
-    font-family: var(--font-family);
-    font-weight: 1000 !important;
-    font-size: 14px !important;
-    line-height: 20px !important;
-}
+/* MINT SPINNER */
 
 .mint-spinner {
     width: 100%;
-    max-width: 100%;
+    max-width: 420px;
     max-height: auto;
     border-radius: 10px;
     background-color: #ffffff;
-    margin-left: 10px;
+    margin: 0 auto;
   }
+  
   .mint-spinner .input-group {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
+
   .mint-spinner .input-group-append,
   .mint-spinner .input-group-prepend {
-    width: 50px;
-    height: 50px;
-    max-width: 50px;
-    max-height: 50px;
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
     flex: 0 0 60px;
     padding-top: 5%;
   }
+
   .mint-spinner .input-group-append .btn,
   .mint-spinner .input-group-prepend .btn {
     width: 20px;
@@ -130,15 +112,11 @@ gap: 0rem;
     border-radius: 5rem;
     align-items: center;
     justify-content: center;
-    font-size: 26px !important;
+    font-size: 26px;
     transition: all 0.3s ease-out;
     padding-top: 1rem;
   }
-  .mint-spinner .input-group-append .btn:hover,
-  .mint-spinner .input-group-prepend .btn:hover {
-    color: #000 !important;
-    background-color: #a7a7a7 !important;
-  }
+
   .mint-spinner .form-control {
     color: rgb(0, 0, 0);
     border: #000;
@@ -147,10 +125,9 @@ gap: 0rem;
     font-weight: 700;
     box-shadow: none;
     text-align: center;
-    background-color: transparent !important;
+    background-color: transparent;
     max-width: calc(100% - 120px);
-    margin-left: 2rem;
-    margin-right: 1rem;
+    
   }
 
   /* BUTTONS */
@@ -198,11 +175,18 @@ gap: 0rem;
     border-color: #000;
     box-shadow: 10px 10px 10px 0px rgb(0, 0, 0);
   }
+
+  /* MEDIA QUERIES*/
   
-  @media (max-width: 640px) {
+  @media screen and (max-width: 760px) {
     .mint-spinner {
       width: 70%;
       max-width: 70%;
+    }
+    .wallet-btn {
+      margin-left: 0;
+      padding: 0.5rem 1rem;
+      max-width: 8rem;
     }
   }
 
