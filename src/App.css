@@ -181,8 +181,8 @@ header .containerheader {
   
   @media screen and (max-width: 760px) {
     .mint-spinner {
-      width: 50%;
-      max-width: 70%;
+      width: 100%;
+      max-width: 100%;
     }
     .wallet-btn {
       margin-left: 0;
