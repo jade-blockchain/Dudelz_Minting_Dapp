@@ -65,6 +65,7 @@ header .containerheader {
   
 }
 
+
 .containermain {
   display: flex;
   flex-direction: column;
@@ -180,7 +181,7 @@ header .containerheader {
   
   @media screen and (max-width: 760px) {
     .mint-spinner {
-      width: 70%;
+      width: 50%;
       max-width: 70%;
     }
     .wallet-btn {
@@ -188,5 +189,25 @@ header .containerheader {
       padding: 0.5rem 1rem;
       max-width: 8rem;
     }
-  }
+    header .containerheader {
+      gap: 0;
+    }
+    .logo img{
+      eidth: 180px !important;
+      height: auto !important;
+    }
+    .elPkvL {
+      width: 100% !important;
+    }
+    .jSNuTb {
+      font-size: 40pt !important;
+    }
+    .mint-btn {
+      width: 289px !important;
+      height: 121px !important;
+      margin-left: 0 !important;
+      display: unset !important;
+      background-size: cover !important;
+    }
+}
 
