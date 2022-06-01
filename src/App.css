@@ -197,7 +197,7 @@ header .containerheader {
       height: auto !important;
     }
     .elPkvL {
-      width: 100% !important;
+      width: 75% !important;
     }
     .jSNuTb {
       font-size: 40pt !important;
@@ -208,6 +208,10 @@ header .containerheader {
       margin-left: 0 !important;
       display: unset !important;
       background-size: cover !important;
+    }
+    .container, .mint {
+      display: unset !important;
+      width: 100% !important;
     }
 }
 
