@@ -69,8 +69,8 @@ header .containerheader {
 .containermain {
     align-items: center;
     justify-content: center;
-    max-width: 470px;
-    left: 327px;
+    max-width: 332px;
+    left: 432px;
     position: absolute;
     top: 353px;
 }
@@ -117,17 +117,15 @@ header .containerheader {
     padding-top: 1rem;
   }
 
-  .mint-spinner .form-control {
-    color: rgb(0, 0, 0);
-    border: #000;
-    border-radius: 1rem;
-    font-size: 40px;
-    font-weight: 700;
-    box-shadow: none;
-    text-align: center;
-    background-color: transparent;
-    max-width: calc(100% - 120px);
-    
+   .mint-spinner .form-control {
+      color: #000;
+      border: #000;
+      border-radius: 1rem;
+      font-size: 40px;
+      box-shadow: none;
+      background-color: transparent;
+      max-width: calc(100% - 120px);
+      width: 160px;
   }
 
   /* BUTTONS */
@@ -161,19 +159,18 @@ header .containerheader {
     border-color: #000;
     box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
   }
-
   .mint-btn {
-    background-image: url("images/mint.png");
-    width: 400px;
-    height: 171px;
-    font-family: var(--font-secondary);
-    font-style: italic;
-    font-weight: bold;
-    font-size: 5rem;
-    margin-left: 1rem;
-    margin-top: 5rem;
-    border-color: #000;
-    box-shadow: 10px 10px 10px 0px rgb(0, 0, 0);
+      background-image: url("images/mint.png")
+      height: 80px;
+      font-family: var(--font-secondary);
+      font-style: italic;
+      font-weight: 700;
+      font-size: 5rem;
+      margin-left: 40px;
+      margin-top: 55px;
+      border-color: #000;
+      box-shadow: 10px 10px 10px 0 #000;
+      background-size: cover;
   }
   .elPkvL {
     width: 600px;
@@ -187,11 +184,10 @@ header .containerheader {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 50pt;
+    font-size: 30pt;
     font-weight: 900;
     text-align: center;
     padding-bottom: 40px !important;
-    margin-top: 40px !important;
     display: block;
     margin-bottom: 0 !important;
 
