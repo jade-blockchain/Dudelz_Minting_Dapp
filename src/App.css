@@ -67,10 +67,9 @@ header .containerheader {
 
 
 .containermain {
-    display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 436px;
+    max-width: 470px;
     left: 327px;
     position: absolute;
     top: 353px;
@@ -176,6 +175,22 @@ header .containerheader {
     border-color: #000;
     box-shadow: 10px 10px 10px 0px rgb(0, 0, 0);
   }
+  .elPkvL {
+    width: 600px;
+    z-index: 99999 !important;
+    position: absolute !important;
+  }
+.jSNuTb {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 50pt;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 40px !important;
+    margin-top: 40px !important;
+    display: block;
+}
 
   /* MEDIA QUERIES*/
   
