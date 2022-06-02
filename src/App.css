@@ -206,24 +206,26 @@ header .containerheader {
       max-width: 8rem;
     }
     header .containerheader {
-      gap: 0;
+        gap: 0;
     }
     .logo img{
-      width: 180px !important;
-      height: auto !important;
+       width: 180px !important;
+        height: auto !important;
     }
     .elPkvL {
-      width: 75% !important;
+        width: 75% !important;
+        top: 144px;
+        left: 15%;
     }
     .jSNuTb {
       font-size: 30pt !important;
     }
     .mint-btn {
-      width: 289px !important;
-      height: 121px !important;
-      margin-left: 0 !important;
-      display: unset !important;
-      background-size: cover !important;
+        width: 289px !important;
+        height: 121px !important;
+        margin-left: 0 !important;
+        display: unset !important;
+        background-size: cover !important;
     }
     .container, .mint {
         display: unset !important;
@@ -235,5 +237,6 @@ header .containerheader {
         position: absolute;
         top: 343px;
     }
+
 }
 
