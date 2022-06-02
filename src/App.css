@@ -189,8 +189,20 @@ header .containerheader {
     text-align: center;
     padding-bottom: 40px !important;
     display: block;
-    margin-bottom: 0 !important;
+    margin-top: 0 !important;
 
+}
+
+.jSNuTb {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px !important;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 40px!important;
+    display: block;
+    margin-bottom: 0!important;
 }
 
   /* MEDIA QUERIES*/
