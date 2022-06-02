@@ -193,6 +193,8 @@ header .containerheader {
     padding-bottom: 40px !important;
     margin-top: 40px !important;
     display: block;
+    margin-bottom: 0 !important;
+
 }
 
   /* MEDIA QUERIES*/
