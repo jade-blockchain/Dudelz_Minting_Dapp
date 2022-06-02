@@ -67,13 +67,13 @@ header .containerheader {
 
 
 .containermain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 470px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 436px;
+    left: 327px;
+    position: absolute;
+    top: 353px;
 }
 
 /* MINT SPINNER */
