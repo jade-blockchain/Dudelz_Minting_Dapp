@@ -216,7 +216,7 @@ header .containerheader {
       width: 75% !important;
     }
     .jSNuTb {
-      font-size: 40pt !important;
+      font-size: 30pt !important;
     }
     .mint-btn {
       width: 289px !important;
@@ -226,8 +226,14 @@ header .containerheader {
       background-size: cover !important;
     }
     .container, .mint {
-      display: unset !important;
-      width: 100% !important;
+        display: unset !important;
+        width: 100% !important;
+    }
+    .containermain {
+        max-width: 320px;
+        left: 20px;
+        position: absolute;
+        top: 343px;
     }
 }
 
