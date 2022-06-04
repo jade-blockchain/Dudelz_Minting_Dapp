@@ -160,7 +160,7 @@ header .containerheader {
     box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
   }
   .mint-btn {
-      background-image: url("images/mint.png")
+      background-image: url("images/mint.png");
       height: 80px;
       font-family: var(--font-secondary);
       font-style: italic;
