@@ -4,7 +4,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 150vh;
-  
 }
 
 /* HEADER */
@@ -177,9 +176,7 @@ header .containerheader {
   .elPkvL {
     width: 600px;
     z-index: 99999 !important;
-    position: absolute !important;
-    top: 120px;
-    left: 340px;
+    margin: 0 auto;
 
   }
 
