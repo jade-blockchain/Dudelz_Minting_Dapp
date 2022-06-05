@@ -234,11 +234,12 @@ header .containerheader {
         width: 100% !important;
     }
     .containermain {
-        max-width: 320px;
-        left: 10%;
-        position: absolute;
-        top: 430px;
-    }
+      max-width: 320px;
+      left: 20px;
+      position: unset;
+      top: 430px;
+      margin: 300px auto 0;
+  }
 
 }
 
