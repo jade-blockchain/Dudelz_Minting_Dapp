@@ -70,9 +70,9 @@ header .containerheader {
     align-items: center;
     justify-content: center;
     max-width: 332px;
-    left: 400px;
+    left: 22%;
     position: absolute;
-    top: 50%;
+    top: 55%;
 }
 
 /* MINT SPINNER */
