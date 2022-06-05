@@ -222,12 +222,12 @@ header .containerheader {
     .jSNuTb {
       font-size: 30pt !important;
     }
-    .mint-btn {
-        width: 289px !important;
-        height: 121px !important;
-        margin-left: 0 !important;
-        display: unset !important;
-        background-size: cover !important;
+   .mint-btn {
+        width: 230px!important;
+        height: 100px!important;
+        margin-left: 0!important;
+        display: unset!important;
+        background-size: cover!important;
     }
     .container, .mint {
         display: unset !important;
@@ -237,7 +237,7 @@ header .containerheader {
         max-width: 320px;
         left: 20px;
         position: absolute;
-        top: 343px;
+        top: 430px;
     }
 
 }
