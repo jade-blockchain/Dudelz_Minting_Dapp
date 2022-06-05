@@ -126,6 +126,7 @@ header .containerheader {
       background-color: transparent;
       max-width: calc(100% - 120px);
       width: 160px;
+      padding-left: 25%;
   }
 
   /* BUTTONS */
