@@ -1,9 +1,9 @@
 body {
   background-image: url('images/Background.png');
-  background-size: cover; 
-  
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 150vh;
+  width: 100%;
+  height: auto;
 }
 
 /* HEADER */
