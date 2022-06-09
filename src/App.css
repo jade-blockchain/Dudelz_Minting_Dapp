@@ -1,5 +1,5 @@
 body {
-  background-image: url('images/New_backgroundv2.png');
+  background-image: url('images/Background.png');
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
@@ -159,6 +159,7 @@ header .containerheader {
     border-color: #000;
     box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
   }
+
   .mint-btn {
       background-image: url("images/mint.png");
       height: 80px;
@@ -173,6 +174,7 @@ header .containerheader {
       background-size: cover;
       width: 180px;
   }
+
   .elPkvL {
     width: 600px;
     z-index: 99999 !important;
