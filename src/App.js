@@ -1085,7 +1085,6 @@ function App() {
    
   return (
 	<body>
-	<img src={bg} fluid />
 	<header>
 	<div class="containerheader">
 	  <div class="logo">
@@ -1098,6 +1097,7 @@ function App() {
 	  </div>
 	</div>
 	  </header>
+	  <img src={bg} fluid />
           <div class="container">
               <StyledLogo src={logo} />
 		  </div>
