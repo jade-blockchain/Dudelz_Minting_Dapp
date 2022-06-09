@@ -6,7 +6,6 @@ import styled from "styled-components";
 import MetaMaskOnboarding from '@metamask/onboarding';
 import Web3 from "web3";
 import './App.css';
-import bg from "./images/Background.png"
 import logo from "./images/Dudelz_logo.png";
 import logosmall from "./images/BHLDudelz_Logo.png";
 import minus from "./images/-Button.png";
@@ -1097,7 +1096,6 @@ function App() {
 	  </div>
 	</div>
 	  </header>
-	  <img src={bg} fluid />
           <div class="container">
               <StyledLogo src={logo} />
 		  </div>
