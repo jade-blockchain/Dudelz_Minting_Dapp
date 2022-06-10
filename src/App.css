@@ -119,14 +119,15 @@ header .containerheader {
    .mint-spinner .form-control {
       color: #000;
       border-color: rgb(162, 112, 255);
-      border-radius: 3rem;
+      border-radius: 1rem;
+      border-width: 8px;
       font-size: 40px;
       box-shadow: none;
       background-color: transparent;
       max-width: calc(100% - 120px);
       width: 60%;
       padding-left: 25%;
-      margin-left: 10%;
+      margin-left: 15%;
       margin-right: 5%;
   }
 
