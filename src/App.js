@@ -41,14 +41,16 @@ export const Heading2 = styled.h1`
 `;
 
 export const Heading3 = styled.h1`
-  color: #000;
+  color: #FFF;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 50pt;
+  font-family: Ultraquick;
   FONT-WEIGHT: 900;
+  text-shadow: 5px 5px rgb(162, 112, 255);
   text-align: center;
-  padding-bottom: 2rem;
-  margin-bottom: 3rem;
+  padding-bottom: 15%;
+  -webkit-text-stroke: 1px black;
 `;
 
 export const Heading4 = styled.h1`

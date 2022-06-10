@@ -198,6 +198,11 @@ header .containerheader {
     margin-bottom: 0!important;
 }
 
+  @font-face {
+    font-family: 'Ultraquick';
+    src: local('UltraQuick'), url(./fonts/Ultraquick-yw3re.ttf) format('truetype');
+  }
+
   /* MEDIA QUERIES*/
   
   @media screen and (max-width: 760px) {
