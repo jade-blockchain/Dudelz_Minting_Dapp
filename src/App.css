@@ -68,7 +68,8 @@ header .containerheader {
 .containermain {
     align-items: center;
     justify-content: center;
-    max-width: 332px;
+    width: 60%;
+    height: auto;
     left: 22%;
     position: absolute;
     top: 55%;
