@@ -64,11 +64,10 @@ header .containerheader {
   
 }
 
-
 .containermain {
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: auto;
     height: auto;
     left: 22%;
     position: absolute;
