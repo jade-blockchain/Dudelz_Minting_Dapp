@@ -7,7 +7,7 @@ import MetaMaskOnboarding from '@metamask/onboarding';
 import Web3 from "web3";
 import './App.css';
 import logo from "./images/Dudelz_logo.png";
-import logosmall from "./images/BHLDudelz_Logo.png";
+import logosmall from "./images/Clean Logo circle.svg";
 import minus from "./images/-Button.png";
 import plus from "./images/+Button.png";
 
@@ -1090,7 +1090,7 @@ function App() {
 	<div class="containerheader">
 	  <div class="logo">
 		<a href="https://bountyhunterslodge.com">
-		  <img src={logosmall} alt="logo" width="250" height="70" />
+		  <img src={logosmall} alt="logo" width="48" height="48" />
 		</a>
 	  </div>
 	  <div class="menu">
