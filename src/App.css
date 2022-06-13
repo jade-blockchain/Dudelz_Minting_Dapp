@@ -9,7 +9,7 @@ body {
 /* HEADER */
 
 header {
-  background-color: linear-gradient(to bottom, #ffffff 40%,#FF4950 20%, #ffffff 40%);
+  background-color: linear-gradient(to bottom, #ffffff 5%,#FF4950 2%, #ffffff 5%);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
