@@ -1098,9 +1098,7 @@ function App() {
 	  </div>
 	</div>
 	  </header>
-          <div class="container">
-              <StyledLogo src={logo} />
-		  </div>
+          
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
               padding: 40,
