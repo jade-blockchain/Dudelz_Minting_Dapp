@@ -250,3 +250,17 @@ header .containerheader {
 
 }
 
+@media screen and (max-width: 400px) {
+  @-ms-viewport { width: 320px; }}
+
+@media screen and (min-width: 400px) and (max-width: 640px) {
+  @-ms-viewport { width: 400px; }}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  @-ms-viewport { width: 640px; }}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  @-ms-viewport { width: 1024px; }}
+
+
+
