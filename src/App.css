@@ -261,7 +261,7 @@ header .containerheader {
       background-position: top center;
     }
 
-    .headerlogo {
+    header .headerlogo {
       width: 24px;
       height: 24px;
     }
