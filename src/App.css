@@ -251,6 +251,8 @@ header .containerheader {
   @media only screen and (max-width:500px) {
     section {
       background-image: url('images/Mobile_BG-1.png');
+      background-size: 100vw auto;
+      background-position: top center;
     }
   }
 
