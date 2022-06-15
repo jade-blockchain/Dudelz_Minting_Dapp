@@ -38,6 +38,14 @@ header .containerheader {
   gap: 1rem;
 }
 
+.nomobile {
+  display: inline;
+}
+
+.mobileonly {
+  display: none;
+}
+
 /* BODY */
 
 .mint {
@@ -254,6 +262,15 @@ header .containerheader {
       background-size: 100vw auto;
       background-position: top center;
     }
+
+    .nomobile {
+      display: none;
+    }
+
+    .mobileonly {
+      display: inline;
+    }
+
   }
 
 }

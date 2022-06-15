@@ -1088,7 +1088,8 @@ function App() {
 	<div class="containerheader">
 	  <div class="logo">
 		<a href="https://bountyhunterslodge.com">
-		  <img src={logosmall} alt="logo" width="64" height="64" />
+		  <img classname="nomobile" src={logosmall} alt="logo" width="64" height="64" />
+		  <img classname="mobileonly" src={logosmall} alt="logo" width="24" height="24" />
 		</a>
 	  </div>
 	  <div class="menu">
