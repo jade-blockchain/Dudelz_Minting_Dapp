@@ -6,12 +6,9 @@ import styled from "styled-components";
 import MetaMaskOnboarding from '@metamask/onboarding';
 import Web3 from "web3";
 import './App.css';
-import nomobile from "./images/New_Background_v2.1.png";
-import mobileonly from "./images/Mobile_BG-1.png";
 import logosmall from "./images/header/Clean Logo circle.svg";
 import minus from "./images/-Button.png";
 import plus from "./images/+Button.png";
-
 
 
 export const StyledLogo = styled.img`
