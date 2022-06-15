@@ -1,12 +1,9 @@
-section .nomobile {
+section {
+  background-image: url(./images/New_Background_v2.1.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 150vh;
-}
-
-section .mobileonly {
-  display: none;
 }
 
 /* HEADER */
@@ -208,15 +205,12 @@ header .containerheader {
   /* MEDIA QUERIES*/
 
   @media screen and (max-width: 1050px) {
-    section .mobileonly {
+    section {
+      background-image: url(./images/Mobile_BG-1.png);
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       height: 150vh;
-    }
-    
-    section .nomobile {
-      display: none;
     }
   }
   

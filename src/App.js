@@ -1100,8 +1100,6 @@ function App() {
 	</div>
 	  </header>
 	  <section>
-		  <div class="nomobile" img src={nomobile} />
-		  <div class="mobileonly" img src={mobileonly} />
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
               padding: 40,
