@@ -1088,7 +1088,7 @@ function App() {
 	<div class="containerheader">
 	  <div class="logo">
 		<a href="https://bountyhunterslodge.com">
-		  <img classname="headerlogo" src={logosmall} alt="logo" />
+		  <img class="headerlogo" src={logosmall} alt="logo" />
 		</a>
 	  </div>
 	  <div class="menu">
