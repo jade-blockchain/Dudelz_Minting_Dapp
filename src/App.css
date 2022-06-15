@@ -38,13 +38,11 @@ header .containerheader {
   gap: 1rem;
 }
 
-.nomobile {
-  display: inline;
+.headerlogo {
+  width: 64px;
+  height: 64px;
 }
 
-.mobileonly {
-  display: none;
-}
 
 /* BODY */
 
@@ -263,12 +261,9 @@ header .containerheader {
       background-position: top center;
     }
 
-    .nomobile {
-      display: none;
-    }
-
-    .mobileonly {
-      display: inline;
+    .headerlogo {
+      width: 24px;
+      height: 24px;
     }
 
   }
