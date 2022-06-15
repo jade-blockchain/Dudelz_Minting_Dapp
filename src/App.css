@@ -248,4 +248,10 @@ header .containerheader {
       margin: 300px auto 0;
   }
 
+  @media only screen and (max-width:500px) {
+    section {
+      background-image: url('images/Mobile_BG-1.png');
+    }
+  }
+
 }
