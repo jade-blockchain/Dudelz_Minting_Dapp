@@ -1,8 +1,12 @@
-section {
+section .nomobile {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 150vh;
+}
+
+section .mobileonly {
+  display: none;
 }
 
 /* HEADER */
@@ -196,14 +200,6 @@ header .containerheader {
     margin-bottom: 0!important;
 }
 
-.nomobile {
-  display: inline;
-}
-
-.mobileonly {
-  display: none;
-}
-
   @font-face {
     font-family: 'Ultraquick';
     src: local('UltraQuick'), url(./fonts/Ultraquick-yw3re.ttf) format('truetype');
@@ -212,12 +208,15 @@ header .containerheader {
   /* MEDIA QUERIES*/
 
   @media screen and (max-width: 1050px) {
-    .nomobile {
-      display: none;
+    section .mobileonly {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 150vh;
     }
-
-    .mobileonly {
-      display: inline;
+    
+    section .nomobile {
+      display: none;
     }
   }
   
