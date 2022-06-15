@@ -1,5 +1,5 @@
 section {
-  background-image: url('images/New_backgroundv2.png');
+  background-image: url('images/New_Background_v2.1.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -249,18 +249,3 @@ header .containerheader {
   }
 
 }
-
-@media screen and (max-width: 400px) {
-  @-ms-viewport { width: 320px; }}
-
-@media screen and (min-width: 400px) and (max-width: 640px) {
-  @-ms-viewport { width: 400px; }}
-
-@media screen and (min-width: 640px) and (max-width: 1024px) {
-  @-ms-viewport { width: 640px; }}
-
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-  @-ms-viewport { width: 1024px; }}
-
-
-
