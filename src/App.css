@@ -203,16 +203,6 @@ header .containerheader {
   }
 
   /* MEDIA QUERIES*/
-
-  @media screen and (max-width: 1050px) {
-    section {
-      background-image: url(./images/Mobile_BG-1.png);
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 150vh;
-    }
-  }
   
   @media screen and (max-width: 760px) {
     .mint-spinner {
@@ -257,5 +247,15 @@ header .containerheader {
       top: 430px;
       margin: 300px auto 0;
   }
+
+@media screen and (max-width: 480px) {
+  section {
+    background-image: url(./images/Mobile_BG-1.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 150vh;
+  }
+}
 
 }
