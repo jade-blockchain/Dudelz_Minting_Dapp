@@ -1,5 +1,4 @@
 section {
-  background-image: url('images/New_Background_v2.1.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -197,12 +196,30 @@ header .containerheader {
     margin-bottom: 0!important;
 }
 
+.nomobile {
+  display: inline;
+}
+
+.mobileonly {
+  display: none;
+}
+
   @font-face {
     font-family: 'Ultraquick';
     src: local('UltraQuick'), url(./fonts/Ultraquick-yw3re.ttf) format('truetype');
   }
 
   /* MEDIA QUERIES*/
+
+  @media screen and (max-width: 1050px) {
+    .nomobile {
+      display: none;
+    }
+
+    .mobileonly {
+      display: inline;
+    }
+  }
   
   @media screen and (max-width: 760px) {
     .mint-spinner {

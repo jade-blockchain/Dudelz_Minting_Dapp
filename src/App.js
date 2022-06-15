@@ -6,7 +6,8 @@ import styled from "styled-components";
 import MetaMaskOnboarding from '@metamask/onboarding';
 import Web3 from "web3";
 import './App.css';
-import logo from "./images/Dudelz_logo.png";
+import nomobile from "./images/New_Background_v2.1/png";
+import mobileonly from "./images/Mobile_BG-1.png";
 import logosmall from "./images/header/Clean Logo circle.svg";
 import minus from "./images/-Button.png";
 import plus from "./images/+Button.png";
@@ -1099,6 +1100,8 @@ function App() {
 	</div>
 	  </header>
 	  <section>
+		  <div class="nomobile" img src={nomobile} />
+		  <div class="mobileonly" img src={mobileonly} />
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
               padding: 40,
