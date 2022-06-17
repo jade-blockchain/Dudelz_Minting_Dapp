@@ -216,7 +216,7 @@ header .containerheader {
     }
 
     .containermain {
-      top: 40vh;
+      top: 34vh;
       max-width: 300px;
       height: auto;
     }
@@ -225,7 +225,7 @@ header .containerheader {
       height: 40px !important;
       box-shadow: 5px 5px 5px 0 #000 !important;
       width: 90px !important;
-      margin-left: 66px;
+      margin-left: 64px;
       margin-top: 20px;
     }
 
