@@ -1,9 +1,8 @@
 section {
   background-image: url('images/New_Desktop_Mint_Dapp_BG.png');
   background-size: 100%;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
-  position: relative;
   height: 150vh;
 }
 
