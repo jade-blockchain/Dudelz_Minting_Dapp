@@ -225,6 +225,8 @@ header .containerheader {
       height: 40px !important;
       box-shadow: 5px 5px 5px 0 #000 !important;
       width: 90px !important;
+      margin-left: 60px;
+      margin-top: 20px;
     }
   }
   
