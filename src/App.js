@@ -49,7 +49,7 @@ export const Heading3 = styled.h1`
   text-align: center;
   padding-bottom: 15%;
   -webkit-text-stroke: 1px black;
-  @media (min-width: 1080px) {
+  @media (max-width: 1080px) {
     font-size: 25pt;
   }
 `;
