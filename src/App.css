@@ -3,7 +3,7 @@ section {
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 150vh;
 }
 
 /* HEADER */
@@ -209,6 +209,12 @@ header .containerheader {
   }
 
   /* MEDIA QUERIES*/
+
+  @media screen and (max-width: 1080px) {
+    section {
+      height: 80vh;
+    }
+  }
   
   @media screen and (max-width: 760px) {
     .mint-spinner {
