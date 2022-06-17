@@ -216,7 +216,9 @@ header .containerheader {
     }
 
     .containermain {
-      top: 10vh;
+      top: 20vh;
+      width: 50%;
+      height: auto;
     }
   }
   
