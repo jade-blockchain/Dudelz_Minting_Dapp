@@ -217,7 +217,7 @@ header .containerheader {
 
     .containermain {
       top: 20vh;
-      width: 50%;
+      max-width: 150px;
       height: auto;
     }
   }
