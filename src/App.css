@@ -228,6 +228,10 @@ header .containerheader {
       margin-left: 60px;
       margin-top: 20px;
     }
+
+    .mint-spinner .form-control {
+      font-size: 20pt;
+    }
   }
   
   @media screen and (max-width: 760px) {
