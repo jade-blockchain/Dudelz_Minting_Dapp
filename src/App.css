@@ -214,6 +214,10 @@ header .containerheader {
     section {
       height: 80vh;
     }
+
+    .containermain {
+      top: 10vh;
+    }
   }
   
   @media screen and (max-width: 760px) {
