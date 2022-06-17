@@ -221,14 +221,9 @@ header .containerheader {
       height: auto;
     }
 
-    .miont-btn {
-      background-image: url("images/mint.png");
+    .mint-btn {
       height: 40px !important;
-      margin-left: 20px !important;
-      margin-top: 35px !important;
-      border-color: #000;
       box-shadow: 5px 5px 5px 0 #000 !important;
-      background-size: cover;
       width: 90px !important;
     }
   }
