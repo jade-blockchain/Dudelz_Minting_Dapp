@@ -16,8 +16,8 @@ export const StyledLogo = styled.img`
   width: 600px;
   @media (max-width: 1080px) {
 	width: 500px;
-    padding-bottom: 1rem;
-	padding-right: 2rem;
+    padding-bottom: 3rem;
+	padding-right: 6rem;
   }
   transition: width 0.5s;
   transition: height 0.5s;
