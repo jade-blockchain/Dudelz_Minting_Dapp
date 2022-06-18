@@ -1101,7 +1101,7 @@ function App() {
 	</div>
 	  </header>
 	  <section>
-		  <div class="container" src={logo} />
+		  <div class="container" img src={logo} />
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
               padding: 40,
