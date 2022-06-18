@@ -172,7 +172,7 @@ header .containerheader {
     FONT-WEIGHT: 400;
     text-shadow: 3px 3px rgb(0, 0, 0);
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     -webkit-text-stroke: 1px black;
   }
 
