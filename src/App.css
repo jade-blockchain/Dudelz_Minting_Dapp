@@ -78,6 +78,10 @@ header .containerheader {
     top: 55vh;
 }
 
+.styledlogo {
+    width: 400px;
+}
+
 /* MINT SPINNER */
 
 .mint-spinner {
