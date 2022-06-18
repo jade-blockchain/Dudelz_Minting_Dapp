@@ -212,6 +212,7 @@ header .containerheader {
 
   @media screen and (max-width: 1080px) {
     section {
+      width: 120%;
       height: 80vh;
       background-position: center center;
     }
