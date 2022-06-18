@@ -218,7 +218,7 @@ header .containerheader {
     }
 
     .containermain {
-      top: 45vh;
+      top: 43vh;
       max-width: 400px;
       height: auto;
     }
@@ -228,7 +228,7 @@ header .containerheader {
       box-shadow: 5px 5px 5px 0 #000 !important;
       width: 90px !important;
       margin-left: 64px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .mint-spinner .form-control {
