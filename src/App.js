@@ -15,7 +15,7 @@ import plus from "./images/+Button.png";
 export const StyledLogo = styled.img`
   width: 600px;
   @media (max-width: 1080px) {
-	width: 700px;
+	width: 600px;
     padding-bottom: 3rem;
 	padding-right: 8rem;
   }
