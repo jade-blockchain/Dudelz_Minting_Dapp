@@ -62,7 +62,8 @@ header .containerheader {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 50%;
+  height: auto;
   margin: 0 auto;
   padding: 0rem 2rem;
 }
