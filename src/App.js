@@ -6,7 +6,7 @@ import styled from "styled-components";
 import MetaMaskOnboarding from '@metamask/onboarding';
 import Web3 from "web3";
 import './App.css';
-import logo from "./images/dudelzlogo.png";
+import logo from "./images/Dudelz_logo.png";
 import logosmall from "./images/header/Clean Logo circle.svg";
 import minus from "./images/-Button.png";
 import plus from "./images/+Button.png";
