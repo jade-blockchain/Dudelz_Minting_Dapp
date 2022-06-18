@@ -14,7 +14,7 @@ import plus from "./images/+Button.png";
 
 export const StyledLogo = styled.img`
   width: 400px;
-  @media (min-width: 767px) {
+  @media (max-width: 1080px) {
     width: 600px;
   }
   transition: width 0.5s;
@@ -1101,7 +1101,9 @@ function App() {
 	</div>
 	  </header>
 	  <section>
+		  <div class="container">
 		  <StyledLogo src={logo} />
+		  </div>
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
               padding: 40,
