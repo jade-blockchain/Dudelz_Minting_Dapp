@@ -6,6 +6,7 @@ import styled from "styled-components";
 import MetaMaskOnboarding from '@metamask/onboarding';
 import Web3 from "web3";
 import './App.css';
+import logo from "./images/dudelzlogo.png";
 import logosmall from "./images/header/Clean Logo circle.svg";
 import minus from "./images/-Button.png";
 import plus from "./images/+Button.png";
@@ -1100,6 +1101,9 @@ function App() {
 	</div>
 	  </header>
 	  <section>
+		  <div class="container">
+			  <img src={logo} />
+		  </div>
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
               padding: 40,
