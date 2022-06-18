@@ -48,7 +48,7 @@ export const Heading3 = styled.h1`
   font-size: 50pt;
   font-family: Ultraquick;
   FONT-WEIGHT: 900;
-  text-shadow: 3px 3px rgb(162, 112, 255);
+  text-shadow: 3px 3px rgb(0, 0, 0);
   text-align: center;
   padding-bottom: 15%;
   -webkit-text-stroke: 1px black;
