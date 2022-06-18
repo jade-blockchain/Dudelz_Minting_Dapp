@@ -1102,7 +1102,7 @@ function App() {
 	  </header>
 	  <section>
 		  <div class="container">
-			  <div class="styledlogo" src={logo} />
+			  <img src={logo} />
 		  </div>
           <div class="containermain" style={{
               backgroundColor: "rgb(255, 255, 255)",
