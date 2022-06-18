@@ -224,9 +224,9 @@ header .containerheader {
     }
 
     .mint-btn {
-      height: 40px !important;
+      height: 50px !important;
       box-shadow: 5px 5px 5px 0 #000 !important;
-      width: 90px !important;
+      width: 120px !important;
       margin-left: 64px;
       margin-top: 40px;
     }
