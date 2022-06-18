@@ -167,9 +167,9 @@ header .containerheader {
     margin-left: 2rem;
     border-color: #000;
     box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
-    font-size: 20pt;
+    font-size: 14pt;
     font-family: Ultraquick;
-    FONT-WEIGHT: 500;
+    FONT-WEIGHT: 400;
     text-shadow: 3px 3px rgb(0, 0, 0);
     text-align: center;
   }
