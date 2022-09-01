@@ -11,7 +11,7 @@ import logosmall from "./images/header/Clean Logo circle.svg";
 import minus from "./images/-Button.png";
 import plus from "./images/+Button.png";
 import Timer from "./timer";
-
+import DefaultTimer from "./defaultTimer";
 export const StyledLogo = styled.img`
   width: 600px;
   @media (max-width: 1080px) {
@@ -1060,6 +1060,9 @@ function App() {
   const MAX_SUPPLY = 5555;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
+  const launchDate = new Date("9/10/2022, 0:0:0 AM").getTime();
+  const current = new Date().getTime();
+  const differ = launchDate - current;
 
   const [Amount, setAmount] = useState(1);
   const incrementMintAmount = () => {
@@ -1107,7 +1110,11 @@ function App() {
         </div>
       </header>
       <section>
-        <Timer data={{ startTime: "20:15", timeState: 20 }} />
+        {differ > 0 ? (
+          <DefaultTimer />
+        ) : (
+          <Timer data={{ startTime: "9/1/2022, 8:45:50 PM" }} />
+        )}
         <div class="container">
           <StyledLogo src={logo} />
         </div>
