@@ -1107,7 +1107,7 @@ function App() {
         </div>
       </header>
       <section>
-        <Timer />;
+        <Timer data={{ startTime: "20:15", timeState: 20 }} />
         <div class="container">
           <StyledLogo src={logo} />
         </div>

@@ -76,7 +76,7 @@ header .containerheader {
     height: auto;
     left: 10vw;
     position: absolute;
-    top: 55vh;
+    top: 56vh;
 }
 
 /* MINT SPINNER */
@@ -222,7 +222,7 @@ header .containerheader {
     }
 
     .containermain {
-      top: 43vh;
+     
       max-width: 400px;
       height: auto;
     }
@@ -278,11 +278,8 @@ header .containerheader {
     }
     .containermain {
       max-width: 320px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      position: absolute;
-      top: 430px;
-      margin-top: 300px;
+      /* transform: translate(-50%, 0); */
+      /* margin-top: 300px; */
   }
 
   @media only screen and (max-width:500px) {
@@ -303,6 +300,7 @@ header .containerheader {
   }
 
 }
+
 
 
 .timer {
@@ -374,4 +372,19 @@ header .containerheader {
   color: white;
   text-align: center;
   display: block;
+}
+
+.time-container {
+  position: relative;
+}
+.start-time {
+  position: absolute;
+  padding: 0 3px;
+  left: 20px;
+  top: 0px;
+  font-size: 25px;
+  border: 2px solid #EF2F3C;
+  background: #f2f2f2;
+  border-radius: 5px;
+  color: #EF2F3C;
 }
