@@ -1064,7 +1064,7 @@ function App() {
   // const current = new Date().getTime();
   // const launchDate = new Date("9/10/2022, 0:0:0 AM").getTime();
   // const differ = launchDate - current;
-  const timer_data = { type: "reset", time: "9/2/2022, 0:0:0 AM" };
+  const timer_data = { type: "default", time: "9/10/2022, 0:0:0 AM" };
 
   const [Amount, setAmount] = useState(1);
   const incrementMintAmount = () => {
