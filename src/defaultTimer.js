@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-export default function Timer() {
+export default function Timer({ endTime }) {
   const [timeState, setTimeState] = useState();
-  const launchDate = new Date("9/10/2022, 0:0:0 AM").getTime();
+  const launchDate = new Date(endTime).getTime();
   const current = new Date().getTime();
   useEffect(() => {
     setTimeState((launchDate - current) / 1000);

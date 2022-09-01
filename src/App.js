@@ -1060,9 +1060,11 @@ function App() {
   const MAX_SUPPLY = 5555;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
-  const launchDate = new Date("9/10/2022, 0:0:0 AM").getTime();
-  const current = new Date().getTime();
-  const differ = launchDate - current;
+
+  // const current = new Date().getTime();
+  // const launchDate = new Date("9/10/2022, 0:0:0 AM").getTime();
+  // const differ = launchDate - current;
+  const timer_data = { type: "reset", time: "9/2/2022, 0:0:0 AM" };
 
   const [Amount, setAmount] = useState(1);
   const incrementMintAmount = () => {
@@ -1110,11 +1112,12 @@ function App() {
         </div>
       </header>
       <section>
-        {differ > 0 ? (
-          <DefaultTimer />
-        ) : (
-          <Timer data={{ startTime: "9/1/2022, 8:45:50 PM" }} />
-        )}
+        {timer_data &&
+          (timer_data.type == "default" ? (
+            <DefaultTimer endTime={timer_data.time} />
+          ) : (
+            <Timer startTime={timer_data.time} />
+          ))}
         <div class="container">
           <StyledLogo src={logo} />
         </div>

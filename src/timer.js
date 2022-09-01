@@ -1,40 +1,37 @@
 import { useState, useEffect } from "react";
 
-export default function Timer({ data }) {
+export default function Timer({ startTime }) {
   const [timeState, setTimeState] = useState(24 * 60 * 60);
-  const [startTime, setStartTime] = useState("");
-
+  const [start, setStart] = useState("");
   const current = new Date().getTime();
 
   useEffect(() => {
-    if (data) {
-      if (data.startTime) {
-        setStartTime(data.startTime);
-        if (typeof data.startTime == "string") {
-          const parseStTime = Date.parse(data.startTime);
-          const differ = (current - parseStTime) / 1000;
-          setTimeState(24 * 60 * 60 - differ);
-        } else {
-          const parseStTime = Date.parse(data.startTime.toDateString());
-          const differ = (current - parseStTime) / 1000;
-          setTimeState(24 * 60 * 60 - differ);
-        }
+    if (startTime) {
+      setStart(startTime);
+      if (typeof startTime == "string") {
+        const parseStTime = Date.parse(startTime);
+        const differ = (current - parseStTime) / 1000;
+        setTimeState(24 * 60 * 60 - differ);
+      } else {
+        const parseStTime = Date.parse(startTime.toDateString());
+        const differ = (current - parseStTime) / 1000;
+        setTimeState(24 * 60 * 60 - differ);
       }
     } else {
       setTimeState(24 * 60 * 60);
     }
-  }, [data]);
+  }, [startTime]);
 
   useEffect(() => {
     const timer = setTimeout(function () {
-      if (!startTime) {
+      if (!start) {
         setTimeState(24 * 60 * 60);
       }
-      if (startTime) {
+      if (start) {
         setTimeState(timeState - 1);
       }
       if (timeState < 1) {
-        setStartTime("");
+        setStart("");
         setTimeState(24 * 60 * 60);
       }
     }, 1000);
@@ -42,7 +39,7 @@ export default function Timer({ data }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [timeState, startTime]);
+  }, [timeState, start]);
   return (
     <div>
       <div className="timer">
