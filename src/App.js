@@ -13,11 +13,10 @@ import plus from "./images/+Button.png";
 import Timer from "./timer";
 import DefaultTimer from "./defaultTimer";
 export const StyledLogo = styled.img`
-  width: 600px;
+  width: 320px;
+  margin-top: -40px;
   @media (max-width: 1080px) {
-    width: 600px;
-    padding-bottom: 3rem;
-    padding-right: 10rem;
+    width: 320px;
   }
   transition: width 0.5s;
   transition: height 0.5s;
@@ -42,18 +41,14 @@ export const Heading2 = styled.h1`
 `;
 
 export const Heading3 = styled.h1`
-  color: #fff;
+  color: rgb(219, 51, 125);
   text-transform: uppercase;
-  letter-spacing: 5px;
+
   font-size: 50pt;
   font-family: Ultraquick;
-  font-weight: 900;
+  font-weight: 500;
   text-align: center;
-  padding-bottom: 15%;
-  -webkit-text-stroke: 1px black;
-  @media (max-width: 1080px) {
-    font-size: 25pt;
-  }
+  padding-bottom: 20px;
 `;
 
 export const Heading4 = styled.h1`
@@ -953,7 +948,7 @@ const updateConnectStatus = async () => {
   const onboarding = new MetaMaskOnboarding();
   const onboardButton = document.getElementById("connectWallet");
   if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-    onboardButton.innerText = "INSTALL METAMASK!";
+    onboardButton.innerText = "CONNECT WALLET ";
     onboardButton.onclick = () => {
       onboardButton.innerText = "Connecting...";
       onboardButton.disabled = true;
@@ -1057,7 +1052,7 @@ async function mint() {
 }
 
 function App() {
-  const MAX_SUPPLY = 5555;
+  const MAX_SUPPLY = 500;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
 
@@ -1125,12 +1120,12 @@ function App() {
           class="containermain"
           style={{
             backgroundColor: "rgb(255, 255, 255)",
-            padding: 40,
+            padding: 20,
             borderRadius: 0,
           }}
         >
           <Heading3>
-            {data.totalSupply} / {MAX_SUPPLY}
+            {data.totalSupply}/{MAX_SUPPLY}
           </Heading3>
           <div className="mint" id="mint">
             <div className="row">
@@ -1138,13 +1133,13 @@ function App() {
                 <div class="mint-spinner p-6 mx-auto mb-6">
                   <div class="input-group input-group-md">
                     <div class="input-group-prepend">
-                      <Button
+                      <button
                         id="input-spinner-left-button"
                         type="button"
                         onClick={decrementMintAmount}
                       >
-                        <img src={minus} />
-                      </Button>
+                        -{/* <img src={minus} style={{ width: "68px" }} /> */}
+                      </button>
                     </div>
                     <input
                       readonly=""
@@ -1153,17 +1148,25 @@ function App() {
                       value={Amount}
                     />
                     <div class="input-group-append">
-                      <Button
+                      <button
                         id="input-spinner-right-button"
                         type="button"
                         onClick={incrementMintAmount}
                       >
-                        <img src={plus} />
-                      </Button>
+                        +{/* <img src={plus} style={{ width: "68px" }} /> */}
+                      </button>
                     </div>
                   </div>
+                  <div style={{ padding: "20px 0" }}>
+                    <span className="price-eth">
+                      <span className="bold">
+                        PRICE<span>: </span>
+                      </span>
+                      0.015 ETH
+                    </span>
+                  </div>
                 </div>
-                <button onClick={mint} className="mint-btn btn"></button>
+                <button onClick={mint} className="mint-btn"></button>
               </form>
             </div>
           </div>

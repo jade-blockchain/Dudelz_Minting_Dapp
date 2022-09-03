@@ -27,7 +27,6 @@ export default function Timer({ endTime }) {
           <span className="box-num">{secondsToTime(timeState).d}</span>
           <span className="box-title-d">D A Y S</span>
         </div>
-        ;
         <div className="box-h">
           <span className="box-num">{secondsToTime(timeState).h}</span>
           <span className="box-title-h">H O U R S</span>
