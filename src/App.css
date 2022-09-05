@@ -207,17 +207,49 @@ header .containerheader {
     color: rgb(219,51,125);
   }
   .wallet-btn {
-    background-image: url("images/ConnectDown.png");
+    /* background-image: url("images/ConnectDown.png"); */
+    background: rgb(235, 10, 140);
     width: 130px;
     height: 50px;
-    background-size: 104% 110%;
-    background-repeat: no-repeat;
+    position: relative;
+    font-family: Ultraquick;
+    color: white;
+    font-size: 23px;
+    line-height: 80%;
+    /* background-size: 104% 110%; */
+    /* background-repeat: no-repeat; */
     box-shadow: 5px 5px 5px 0 #000;
-    background-position: -3px -4px;
-    border: none;
+    /* background-position: -3px -4px; */
+    border-radius: 5px;
     cursor: pointer;
+    border: 3px solid #000;
+    transition: all 0.3s linear;
   }
-
+  .wallet-btn:hover {
+    background: rgb(160, 70, 230);
+  }
+  .wallet-btn::after {
+    content: "";
+    width: 24px;
+    height: 44px;
+    top:0;
+    left: 20px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(-25deg);
+  }
+  
+  .wallet-btn::before {
+    content: "";
+    width: 5px;
+    height: 44px;
+    top:0;
+    left: 52px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    transform: skew(-25deg);
+  }
+  
   .mint-btn {
      background-image: url('images/MintDown.png');
      border: none;
