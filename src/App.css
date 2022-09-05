@@ -1,16 +1,33 @@
+body {
+  background-image: url('images/BG.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
 section {
-  background-image: url('images/New_Desktop_Mint_Dapp_BG.png');
+  /* background-image: url('images/BG.png'); */
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 150vh;
+  height: 100vh;
   
 }
 
 /* HEADER */
 
 header {
-  background-image: url('images/headerbackground2.png');
+  position: relative;
+  /* background-image: url('images/headerbackground2.png'); */
+}
+header::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 30px;
+  left: 0;
+  top:45px;
+  background: rgb(236, 88, 89);
 }
 
 header .containerheader {
@@ -31,6 +48,7 @@ header .containerheader {
   align-items: center;
   margin: 0 20px;
   margin-top: -13px;
+  z-index: 9999999;
 }
 
 .logo {
@@ -39,6 +57,7 @@ header .containerheader {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  z-index: 9999999;
 }
 
 .headerlogo {
@@ -74,7 +93,8 @@ header .containerheader {
     justify-content: center;
     max-width: 360px;
     height: auto;
-    left: 130px;
+    left: 50%;
+    transform: translate(-390px, 0);
     position: absolute;
     top: 340px;
 }
@@ -264,6 +284,9 @@ header .containerheader {
     }
   }
   @media screen and (max-width: 760px) {
+    header::after {
+      top: 103px;
+    }
     .mint-spinner {
       width: 100%;
       max-width: 100%;
@@ -328,7 +351,8 @@ header .containerheader {
 .timer {
   display: inline-flex;
   position: absolute;
-  left: 95px;
+  left: 50%;
+  transform: translate(-100%, 0);
   top:225px;
 }
 @media screen and (max-width: 768px) {
