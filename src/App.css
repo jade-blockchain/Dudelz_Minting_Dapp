@@ -198,9 +198,9 @@ header .containerheader {
   }
   .price-eth {
     font-size: 28px;
-    font-family: Ultraquick;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: -2px;
-    font-weight: 400;
+    font-weight: 300;
   }
   .price-eth .bold {
     font-weight: 600;

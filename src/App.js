@@ -1162,7 +1162,7 @@ function App() {
                       <span className="bold">
                         PRICE<span>: </span>
                       </span>
-                      {0.016 * Amount} ETH
+                      {(0.016 * Amount).toFixed(3)} ETH
                     </span>
                   </div>
                 </div>
