@@ -1162,7 +1162,7 @@ function App() {
                       <span className="bold">
                         PRICE<span>: </span>
                       </span>
-                      0.015 ETH
+                      0.016 ETH
                     </span>
                   </div>
                 </div>
