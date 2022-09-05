@@ -948,7 +948,7 @@ const updateConnectStatus = async () => {
   const onboarding = new MetaMaskOnboarding();
   const onboardButton = document.getElementById("connectWallet");
   if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-    onboardButton.innerText = "CONNECT WALLET ";
+    // onboardButton.innerText = "CONNECT WALLET ";
     onboardButton.onclick = () => {
       onboardButton.innerText = "Connecting...";
       onboardButton.disabled = true;
@@ -1099,7 +1099,7 @@ function App() {
           </div>
           <div class="menu">
             <button
-              class="wallet-btn btn"
+              class="wallet-btn"
               onClick={connectwallet}
               id="connectWallet"
             ></button>
@@ -1162,7 +1162,7 @@ function App() {
                       <span className="bold">
                         PRICE<span>: </span>
                       </span>
-                      0.016 ETH
+                      {0.016 * Amount} ETH
                     </span>
                   </div>
                 </div>
