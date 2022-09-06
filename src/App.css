@@ -3,10 +3,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+  height: 120vh;
+  width: 100vw;
 }
 section {
-  /* background-image: url('images/BG.png'); */
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
@@ -18,7 +18,6 @@ section {
 
 header {
   position: relative;
-  /* background-image: url('images/headerbackground2.png'); */
 }
 header::after {
   content: "";
@@ -89,6 +88,7 @@ header .containerheader {
 }
 
 .containermain {
+  background-color: rgba(255, 255, 255, 0.85);
     align-items: center;
     justify-content: center;
     max-width: 360px;
@@ -106,7 +106,7 @@ header .containerheader {
     max-width: 420px;
     max-height: auto;
     border-radius: 10px;
-    background-color: #ffffff;
+    background: transparent;
     margin: 0 auto;
   }
   
@@ -129,12 +129,7 @@ header .containerheader {
      transition: all 0.3s ease-out;
     
   }
-  /* .mint-spinner .input-group-append {
-    padding: 6px 2px;
-  }
-  .mint-spinner .input-group-prepend {
-    padding: 6px 21px;
-  } */
+
   .mint-spinner .input-group-prepend button {
      font-size: 30px;
      cursor: pointer;
@@ -168,9 +163,6 @@ header .containerheader {
       border: 2px solid black;
       font-size: 40px;
       box-shadow: none;
-      /* background-color: transparent; */
-      /* max-width: calc(100% - 160px);
-      width: 60%; */
       width: 160px;
       margin: 0 15px;
   }
@@ -198,8 +190,8 @@ header .containerheader {
   }
   .price-eth {
     font-size: 28px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: -2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: -5px;
     font-weight: 300;
   }
   .price-eth .bold {
@@ -207,74 +199,48 @@ header .containerheader {
     color: rgb(219,51,125);
   }
   .wallet-btn {
-    /* background-image: url("images/ConnectDown.png"); */
-    background: rgb(235, 10, 140);
-    width: 130px;
-    height: 50px;
-    position: relative;
-    font-family: Ultraquick;
-    color: white;
-    font-size: 23px;
-    line-height: 80%;
-    /* background-size: 104% 110%; */
-    /* background-repeat: no-repeat; */
-    box-shadow: 5px 5px 5px 0 #000;
-    /* background-position: -3px -4px; */
-    border-radius: 5px;
+    background-image: url("images/ConnectUp.png");
+    background-size: 100%;
+    background-position-x: -1px;
+    background-position-y: -1px;
+    background-size: 101%;
+    width: 129px;
+    height: 46px;
     cursor: pointer;
-    border: 3px solid #000;
     transition: all 0.3s linear;
+    border: none;
+    border-radius: 0 9px 0 0;
   }
-  .wallet-btn:hover {
-    background: rgb(160, 70, 230);
+  .wallet-btn.active {
+    background-image: url("images/ConnectDown.png");
+    background-size: 102%;
+    background-position-x: -2px;
   }
-  .wallet-btn::after {
-    content: "";
-    width: 24px;
-    height: 44px;
-    top:0;
-    left: 20px;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.5);
-    transform: skewX(-25deg);
-  }
-  
-  .wallet-btn::before {
-    content: "";
-    width: 5px;
-    height: 44px;
-    top:0;
-    left: 52px;
-    background: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    transform: skew(-25deg);
-  }
-  
   .mint-btn {
-     background-image: url('images/MintDown.png');
+     background-image: url('images/MintUp.png');
+     background-position-x: 0px;
      border: none;
+     border-radius: 0 14px 0 0;
      background-size: cover;
-     background-position: 1px;
       color: white;
       height: 63px;
       font-family: Ultraquick;
       text-align: center;
       padding: 0;
       margin:auto;
-      box-shadow: 10px 10px 10px 0 #000;
       width: 180px;
-      border-radius: 5px;
       cursor: pointer;
-      transition: all 0.3s ease;
       position: relative;
       cursor: pointer;
   }
-  /* .mint-btn:hover {
-    background: rgb(160, 70, 230);
-  } */
-  .mint-btn .btn {
-    display: block;
+  .mint-btn.active {
+     background-image: url('images/MintDown.png');
+     background-size: 103%;
+     background-position-x: initial;
+    background-position-x: -4px;
+    background-position-y: -6px;
   }
+
   .elPkvL {
     width: 600px;
     z-index: 99999 !important;
@@ -303,13 +269,17 @@ header .containerheader {
 
   @media screen and (max-width: 1080px) {
     section {
-      height: 80vh;
+      height: 100vh;
       background-position: center center;
     }
   }
+
   @media screen and (max-width: 760px) {
     header::after {
       top: 47px;
+    }
+    .container {
+      padding: 2rem;
     }
     .mint-spinner {
       width: 100%;
@@ -324,10 +294,7 @@ header .containerheader {
     header .containerheader {
         gap: 0;
     }
-    /* .logo img{
-       width: 180px !important;
-        height: auto !important;
-    } */
+  
     .elPkvL {
         width: 75% !important;
         top: 144px;
@@ -336,40 +303,6 @@ header .containerheader {
     .jSNuTb {
       font-size: 30pt !important;
     }
-   /* .mint-btn {
-        width: 230px!important;
-        height: 100px!important;
-        margin-left: 0!important;
-        display: unset!important;
-        background-size: cover!important;
-    } */
-    /* .container, .mint {
-        display: unset !important;
-        width: 100% !important;
-    }
-    .containermain {
-      max-width: 320px;
-      transform: translate(-50%, 0);
-      margin-top: 300px;
-  } */
-
-  /* @media only screen and (max-width:500px) {
-    section {
-      background-image: url('images/Mobile_BG-1.png');
-      background-size: 100vw auto;
-      background-position: top center;
-    }
-
-    header .headerlogo {
-      width: 50px !important;
-      height: 50px !important;
-    }
-    .wallet-btn {
-      margin-top: 10px;
-     }
-
-  } */
-
 }
 
 .timer {
@@ -379,22 +312,25 @@ header .containerheader {
   transform: translate(-100%, 0);
   top:225px;
 }
-@media screen and (max-width: 768px) {
-  .timer {
-    top: 330px;
+ @media screen and (max-width: 860px) {
+    .timer {
+    top: 260px;
     left: 50%;
     transform: translate(-50%,0);
   }
   .containermain {
-    top: 450px;
+    top: 400px;
     left: 50%;
     transform: translate(-50%,0);
   }
+  }
+@media screen and (max-width: 768px) {
+  
     
 }
 @media screen and (max-width: 500px) {
   .containermain {
-    top: 410px;
+    top: 350px;
     width: 325px;
 
   }

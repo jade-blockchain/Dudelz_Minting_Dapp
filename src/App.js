@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import { fetchData } from "./redux/data/dataActions";
 import styled from "styled-components";
 import MetaMaskOnboarding from "@metamask/onboarding";
 import Web3 from "web3";
 import "./App.css";
 import logo from "./images/Dudelz_logo.png";
-import logosmall from "./images/header/Clean Logo circle.svg";
-import minus from "./images/-Button.png";
-import plus from "./images/+Button.png";
+import logosmall from "./images/BHL_Logo_Vector.svg";
 import Timer from "./timer";
 import DefaultTimer from "./defaultTimer";
 export const StyledLogo = styled.img`
@@ -948,9 +946,9 @@ const updateConnectStatus = async () => {
   const onboarding = new MetaMaskOnboarding();
   const onboardButton = document.getElementById("connectWallet");
   if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-    onboardButton.innerText = "CONNECT WALLET ";
+    // onboardButton.innerText = "CONNECT WALLET ";
     onboardButton.onclick = () => {
-      onboardButton.innerText = "Connecting...";
+      // onboardButton.innerText = "Connecting...";
       onboardButton.disabled = true;
       onboarding.startOnboarding();
     };
@@ -1056,11 +1054,10 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
 
-  // const current = new Date().getTime();
-  // const launchDate = new Date("9/10/2022, 0:0:0 AM").getTime();
-  // const differ = launchDate - current;
   const timer_data = { type: "default", time: "9/10/2022, 0:0:0 AM" };
 
+  const [toggle, setToggle] = useState(false);
+  const [walletToggle, setWalletToggle] = useState(false);
   const [Amount, setAmount] = useState(1);
   const incrementMintAmount = () => {
     let newAmount = Amount + 1;
@@ -1099,8 +1096,11 @@ function App() {
           </div>
           <div class="menu">
             <button
-              class="wallet-btn"
-              onClick={connectwallet}
+              class={walletToggle ? "wallet-btn active" : "wallet-btn"}
+              onClick={() => {
+                setWalletToggle((prev) => !prev);
+                connectwallet();
+              }}
               id="connectWallet"
             ></button>
           </div>
@@ -1119,7 +1119,6 @@ function App() {
         <div
           class="containermain"
           style={{
-            backgroundColor: "rgb(255, 255, 255)",
             padding: 20,
             borderRadius: 0,
           }}
@@ -1129,45 +1128,51 @@ function App() {
           </Heading3>
           <div className="mint" id="mint">
             <div className="row">
-              <form className="col-lg-30 mt-3">
-                <div class="mint-spinner p-6 mx-auto mb-6">
-                  <div class="input-group input-group-md">
-                    <div class="input-group-prepend">
-                      <button
-                        id="input-spinner-left-button"
-                        type="button"
-                        onClick={decrementMintAmount}
-                      >
-                        -{/* <img src={minus} style={{ width: "68px" }} /> */}
-                      </button>
-                    </div>
-                    <input
-                      readonly=""
-                      class="form-control"
-                      name="amount"
-                      value={Amount}
-                    />
-                    <div class="input-group-append">
-                      <button
-                        id="input-spinner-right-button"
-                        type="button"
-                        onClick={incrementMintAmount}
-                      >
-                        +{/* <img src={plus} style={{ width: "68px" }} /> */}
-                      </button>
-                    </div>
+              {/* <form className="col-lg-30 mt-3"> */}
+              <div class="mint-spinner p-6 mx-auto mb-6">
+                <div class="input-group input-group-md">
+                  <div class="input-group-prepend">
+                    <button
+                      id="input-spinner-left-button"
+                      type="button"
+                      onClick={decrementMintAmount}
+                    >
+                      -
+                    </button>
                   </div>
-                  <div style={{ padding: "20px 0" }}>
-                    <span className="price-eth">
-                      <span className="bold">
-                        PRICE<span>: </span>
-                      </span>
-                      {(0.016 * Amount).toFixed(3)} ETH
-                    </span>
+                  <input
+                    readonly=""
+                    class="form-control"
+                    name="amount"
+                    value={Amount}
+                  />
+                  <div class="input-group-append">
+                    <button
+                      id="input-spinner-right-button"
+                      type="button"
+                      onClick={incrementMintAmount}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
-                <button onClick={mint} className="mint-btn"></button>
-              </form>
+                <div style={{ padding: "20px 0" }}>
+                  <span className="price-eth">
+                    <span className="bold">
+                      PRICE<span>: </span>
+                    </span>
+                    {(0.016 * Amount).toFixed(3)} ETH
+                  </span>
+                </div>
+              </div>
+              <button
+                onClick={() => {
+                  setToggle((prev) => !prev);
+                  mint();
+                }}
+                className={toggle ? "mint-btn active" : "mint-btn"}
+              ></button>
+              {/* </form> */}
             </div>
           </div>
         </div>
