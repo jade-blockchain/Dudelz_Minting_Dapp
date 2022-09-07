@@ -225,7 +225,24 @@ header .containerheader {
     position: relative;
   }
   .wallet-btn.active::after {
-    
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 27px;
+    height: 42px;
+    top:0;
+    left: 21px;
+    transform: skewX(-25deg);
+  }
+  .wallet-btn.active::before {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 5px;
+    height: 42px;
+    top:0;
+    left: 55px;
+    transform: skewX(-25deg);
   }
   .mint-btn {
      background-image: url('images/MintUp.png');
