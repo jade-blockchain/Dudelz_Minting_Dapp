@@ -210,6 +210,10 @@ header .containerheader {
     transition: all 0.3s linear;
     border: none;
     border-radius: 0 9px 0 0;
+    font-size: 18px;
+    color: white;
+    font-weight:700;
+    font-family: Ultraquick;
   }
   .wallet-btn.active {
     background-image: url("images/ConnectDown.png");
