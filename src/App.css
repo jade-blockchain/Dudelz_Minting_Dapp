@@ -200,7 +200,6 @@ header .containerheader {
   }
   .wallet-btn {
     background-image: url("images/ConnectUp.png");
-    background-size: 100%;
     background-position-x: -1px;
     background-position-y: -1px;
     background-size: 101%;
@@ -216,9 +215,17 @@ header .containerheader {
     font-family: Ultraquick;
   }
   .wallet-btn.active {
-    background-image: url("images/ConnectDown.png");
-    background-size: 102%;
-    background-position-x: -2px;
+    background-image: none;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-size: 100%;
+    background-color: rgb(235, 10, 140);
+    border: 2px solid #000;
+    border-radius: 5px;
+    position: relative;
+  }
+  .wallet-btn.active::after {
+    
   }
   .mint-btn {
      background-image: url('images/MintUp.png');
@@ -243,6 +250,7 @@ header .containerheader {
      background-position-x: initial;
     background-position-x: -4px;
     background-position-y: -6px;
+    border-radius: 0 0 0 0;
   }
 
   .elPkvL {
