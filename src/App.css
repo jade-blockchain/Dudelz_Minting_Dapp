@@ -264,9 +264,8 @@ header .containerheader {
   .mint-btn.active {
      background-image: url('images/MintDown.png');
      background-size: 103%;
-     background-position-x: initial;
-    background-position-x: -4px;
-    background-position-y: -6px;
+     background-position-x: left;
+    background-position-y: -2px;
     border-radius: 0 0 0 0;
   }
 
