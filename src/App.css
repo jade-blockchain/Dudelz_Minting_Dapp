@@ -248,7 +248,7 @@ header .containerheader {
      background-image: url('images/MintUp.png');
      background-position-x: 0px;
      border: none;
-     border-radius: 0 14px 0 0;
+     border-radius: 0 0 0 0;
      background-size: cover;
       color: white;
       height: 63px;
