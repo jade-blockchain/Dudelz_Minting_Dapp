@@ -821,7 +821,6 @@ const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
 const chain = "rinkeby"; // rinkeby or ethereum
 
 // METAMASK CONNECTION
-async function connectwallet() {
 window.addEventListener("DOMContentLoaded", async () => {
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
@@ -876,7 +875,6 @@ const updateConnectStatus = async () => {
           contract = new web3.eth.Contract(ABI, ADDRESS);
         });
     };
-  }
   }
 };
 
@@ -933,6 +931,7 @@ async function checkChain() {
     }
   }
 }
+
 
 async function mint() {
   if (window.ethereum) {
