@@ -817,7 +817,7 @@ let account = null;
 let contract = null;
 let accounts = null;
 
-const ADDRESS = "0xA854E8f4624631b4Ae3B0c96430A079DeF538a01";
+const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
 const chain = "rinkeby"; // rinkeby or ethereum
 
 // METAMASK CONNECTION
