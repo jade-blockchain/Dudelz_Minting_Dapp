@@ -872,7 +872,7 @@ const updateConnectStatus = async () => {
           onboardButton.disabled = true;
           window.address = accts[0];
           accounts = accts;
-          window.contract = new web3.eth.Contract(ABI, ADDRESS);
+          contract = new web3.eth.Contract(ABI, ADDRESS);
         });
     };
   }
@@ -944,9 +944,9 @@ async function connectwallet() {
 async function mint() {
   if (window.ethereum) {
     var _quantity = Number(document.querySelector("[name=amount]").value);
-    var mintRate = Number(await window.contract.methods.cost().call());
+    var mintRate = Number(await contract.methods.cost().call());
     var totalAmount = mintRate * _quantity;
-    window.contract.methods.mint(account, _quantity).send({ from: account, value: String(totalAmount) });
+    contract.methods.mint(account, _quantity).send({ from: account, value: String(totalAmount) });
   }
 }
 
