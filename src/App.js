@@ -1069,11 +1069,11 @@ function App() {
                 </div>
               </div>
               <button
+                className={toggle ? "mint-btn active" : "mint-btn"}
                 onClick={() => {
                   setToggle((prev) => !prev);
                   mint();
                 }}
-                className={toggle ? "mint-btn active" : "mint-btn"}
               ></button>
               {/* </form> */}
             </div>
