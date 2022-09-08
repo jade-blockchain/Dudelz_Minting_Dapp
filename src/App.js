@@ -943,10 +943,10 @@ async function connectwallet() {
 
 async function mint() {
   if (window.ethereum) {
-    var mintAmount = Number(document.querySelector("[name=_quantity]").value);
+    var _mintAmount = Number(document.querySelector("[name=amount]").value);
     var mintRate = Number(await contract.methods.PUBLIC_SALE_PRICE().call());
-    var totalAmount = mintRate * mintAmount;
-    contract.methods.mint(mintAmount).send({ from: account, value: String(totalAmount) });
+    var totalAmount = mintRate * _mintAmount;
+    contract.methods.mint(_mintAmount).send({ from: account, value: String(totalAmount) });
   }
 }
 
