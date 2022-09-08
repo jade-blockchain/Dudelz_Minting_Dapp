@@ -1054,7 +1054,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
 
-  const timer_data = { type: "default", time: "9/10/2022, 1:0:0 PM" };
+  const timer_data = { type: "reset", time: "9/5/2002 00:00:00 PM" };
 
   const [toggle, setToggle] = useState(false);
   const [walletToggle, setWalletToggle] = useState(false);
