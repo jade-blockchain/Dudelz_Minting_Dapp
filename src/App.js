@@ -877,8 +877,8 @@ const updateConnectStatus = async () => {
         });
     };
   }
+  }
 };
-}
 
 async function checkChain() {
   let chainId = 0;
