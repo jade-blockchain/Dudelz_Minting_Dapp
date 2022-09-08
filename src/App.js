@@ -815,122 +815,9 @@ const ABI = [
 
 let account = null;
 let contract = null;
-let accounts = null;
 
 const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
-const chain = "rinkeby"; // rinkeby or ethereum
 
-// METAMASK CONNECTION
-window.addEventListener("DOMContentLoaded", async () => {
-  if (window.ethereum) {
-    window.web3 = new Web3(window.ethereum);
-    checkChain();
-  } else if (window.web3) {
-    window.web3 = new Web3(window.web3.currentProvider);
-  }
-
-  if (window.web3) {
-    // Check if User is already connected by retrieving the accounts
-    await window.web3.eth.getAccounts().then(async (addr) => {
-      accounts = addr;
-    });
-  }
-
-  updateConnectStatus();
-  if (MetaMaskOnboarding.isMetaMaskInstalled()) {
-    window.ethereum.on("accountsChanged", (newAccounts) => {
-      accounts = newAccounts;
-      updateConnectStatus();
-    });
-  }
-});
-
-const updateConnectStatus = async () => {
-  const onboarding = new MetaMaskOnboarding();
-  const onboardButton = document.getElementById("connectWallet");
-  if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-    // onboardButton.innerText = "CONNECT WALLET ";
-    onboardButton.onclick = () => {
-      onboardButton.innerText = "Connecting...";
-      onboardButton.disabled = true;
-      onboarding.startOnboarding();
-    };
-  } else if (accounts && accounts.length > 0) {
-    onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
-    window.address = accounts[0];
-    onboardButton.disabled = true;
-    onboarding.stopOnboarding();
-  } else {
-    onboardButton.innerText = "CONNECT WALLET!";
-    onboardButton.onclick = async () => {
-      await window.ethereum
-        .request({
-          method: "eth_requestAccounts",
-        })
-        .then(function (accts) {
-          onboardButton.innerText = `✔ ...${accts[0].slice(-4)}`;
-          onboardButton.disabled = true;
-          window.address = accts[0];
-          accounts = accts;
-          contract = new web3.eth.Contract(ABI, ADDRESS);
-        });
-    };
-  }
-};
-
-async function checkChain() {
-  let chainId = 0;
-  if (chain === "rinkeby") {
-    chainId = 4;
-  } else if (chain === "ethereum") {
-    chainId = 1;
-  }
-  if (window.ethereum.networkVersion !== chainId) {
-    try {
-      await window.ethereum.request({
-        method: "wallet_switchEthereumChain",
-        params: [{ chainId: web3.utils.toHex(chainId) }],
-      });
-      updateConnectStatus();
-    } catch (err) {
-      // This error code indicates that the chain has not been added to MetaMask.
-      if (err.code === 4902) {
-        try {
-          if (chain === "rinkeby") {
-            await window.ethereum.request({
-              method: "wallet_addEthereumChain",
-              params: [
-                {
-                  chainName: "Rinkeby Test Network",
-                  chainId: web3.utils.toHex(chainId),
-                  nativeCurrency: { name: "ETH", decimals: 18, symbol: "ETH" },
-                  rpcUrls: [
-                    "https://rinkeby.infura.io/v3/328b63476ec347c7a7106b3053e2ee83",
-                  ],
-                },
-              ],
-            });
-          } else if (chain === "ethereum") {
-            await window.ethereum.request({
-              method: "wallet_addEthereumChain",
-              params: [
-                {
-                  chainName: "Ethereum Mainnet",
-                  chainId: web3.utils.toHex(chainId),
-                  nativeCurrency: { name: "ETH", decimals: 18, symbol: "ETH" },
-                  rpcUrls: ["https://polygon-rpc.com/"],
-                },
-              ],
-            });
-          }
-          updateConnectStatus();
-        } catch (err) {
-          console.log(err);
-        }
-      }
-    }
-  }
-}
 
 async function connectwallet() {
   if (window.ethereum) {
@@ -938,6 +825,7 @@ async function connectwallet() {
     await window.ethereum.send("eth_requestAccounts");
     var accounts = await web3.eth.getAccounts();
     account = accounts[0];
+    contract = new web3.eth.Contract(ABI, ADDRESS);
   }
 }
 
