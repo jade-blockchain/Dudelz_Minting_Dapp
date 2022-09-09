@@ -896,7 +896,7 @@ function App() {
     getData();
   }, [blockchain.account]);
 
-  const totalSupply = await contract.methods.totalPublicMint(account).call();
+  const totalSupply = contract.methods.totalPublicMint(account).call();
 
   return (
     <body>
