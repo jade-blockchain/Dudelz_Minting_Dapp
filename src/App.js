@@ -868,7 +868,6 @@ async function mint() {
 
 function App() {
   const MAX_SUPPLY = 500;
-  const DefaultValue = 3;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   
@@ -901,7 +900,7 @@ function App() {
   const decrementMintAmount = () => {
     let newAmount = Amount - 1;
     if (newAmount < 1) {
-      newAmount = 1;
+      newAmount = 3;
     }
     setAmount(newAmount);
   };
@@ -979,7 +978,6 @@ function App() {
                     readonly=""
                     class="form-control"
                     name="amount"
-					defaultValue={DefaultValue}
                     value={Amount}
                   />
                   <div class="input-group-append">
