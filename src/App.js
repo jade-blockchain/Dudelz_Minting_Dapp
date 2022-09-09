@@ -870,6 +870,7 @@ function App() {
   const MAX_SUPPLY = 500;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
+  const defaultValue = 3;
   
 
   const timer_data = { type: "default", time: "9/10/2022 11:00:00 PM" };
@@ -900,7 +901,7 @@ function App() {
   const decrementMintAmount = () => {
     let newAmount = Amount - 1;
     if (newAmount < 1) {
-      newAmount = 3;
+      newAmount = 1;
     }
     setAmount(newAmount);
   };
@@ -978,6 +979,7 @@ function App() {
                     readonly=""
                     class="form-control"
                     name="amount"
+					defaultValue={defaultValue}
                     value={Amount}
                   />
                   <div class="input-group-append">
