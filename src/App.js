@@ -937,7 +937,7 @@ function App() {
           }}
         >
           <Heading3>
-            {data.totalSupply} / {MAX_SUPPLY}
+            {data.totalPublicMint} / {MAX_SUPPLY}
           </Heading3>
           <div className="mint" id="mint">
             <div className="row">
