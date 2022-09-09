@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
+import { GiCheckMark } from 'react-icons/gi'; // Tickmark icon in connect wallet button
+
 // import Button from "react-bootstrap/Button";
 import { fetchData } from "./redux/data/dataActions";
 import styled from "styled-components";
@@ -818,22 +821,28 @@ let contract = null;
 
 const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
 
-async function connectwallet() {
-  if (window.ethereum) {
-    var web3 = new Web3(window.ethereum);
-    await window.ethereum.send("eth_requestAccounts");
-    var accounts = await web3.eth.getAccounts();
-    account = accounts[0];
-    contract = new web3.eth.Contract(ABI, ADDRESS);
-  }
-}
+//Moved the connectWallet function inside App component so that state variable could be updated when wallet connected.
+/*async function connectwallet() {
+		if (window.ethereum) {
+    		var web3 = new Web3(window.ethereum);
+    		await window.ethereum.send("eth_requestAccounts");
+    		var accounts = await web3.eth.getAccounts();
+			account = accounts[0];
+			setWalletAddress(account);
+    		contract = new web3.eth.Contract(ABI, ADDRESS);
+  		}
+	}*/
 
 async function mint() {
-  if (window.ethereum) {
+	if (window.ethereum) {
+	var afterMintMessage = document.querySelector("[id=after-mint-message]"); // To add notification message
+	afterMintMessage.className = ""; // To clear the styles of the message box initially	
     var _quantity = Number(document.querySelector("[name=amount]").value);
     var mintRate = Number(await contract.methods.PUBLIC_SALE_PRICE().call());
-    var totalAmount = mintRate * _quantity;
-    contract.methods.mint(_quantity).send({ from: account, value: String(totalAmount) });
+	var totalAmount = mintRate * _quantity;
+	await contract.methods.mint(_quantity).send({ from: account, value: String(totalAmount) }); // calls async here
+	afterMintMessage.innerHTML = "Congratulations, you now own a Dudelz!<br />Head to <a href='https://opensea.io/collection/dudelz-by-jojami'>https://opensea.io/collection/dudelz-by-jojami</a> to check out what who you got."; // Notification message
+	afterMintMessage.className += "after-mint-message"; // Class to animate notification message
   }
 }
 
@@ -845,7 +854,8 @@ function App() {
   const timer_data = { type: "default", time: "9/10/2022 11:00:00 PM" };
 
   const [toggle, setToggle] = useState(false);
-  const [walletToggle, setWalletToggle] = useState(false);
+	const [walletToggle, setWalletToggle] = useState(false);
+	const [walletAddress, setWalletAddress] = useState("Connect Wallet"); // To update button text after walletconnect
   const [Amount, setAmount] = useState(1);
   const incrementMintAmount = () => {
     let newAmount = Amount + 1;
@@ -855,6 +865,17 @@ function App() {
     setAmount(newAmount);
   };
 
+	// Moved this function from outside of App component to update the state value when wallet gets connected
+	async function connectwallet() {
+		if (window.ethereum) {
+			var web3 = new Web3(window.ethereum);
+			await window.ethereum.send("eth_requestAccounts");
+			var accounts = await web3.eth.getAccounts();
+			account = accounts[0];
+			setWalletAddress("..." + account.substring(account.length - 4, account.length)); // Set wallet address to the button
+			contract = new web3.eth.Contract(ABI, ADDRESS);
+  		}
+	}
   const decrementMintAmount = () => {
     let newAmount = Amount - 1;
     if (newAmount < 1) {
@@ -882,7 +903,7 @@ function App() {
               <img class="headerlogo" src={logosmall} alt="logo" />
             </a>
           </div>
-          <div class="menu">
+			<div class="menu">
             <button
               class={walletToggle ? "wallet-btn active" : "wallet-btn"}
               onClick={() => {
@@ -890,7 +911,7 @@ function App() {
                 connectwallet();
               }}
               id="connectWallet"
-            ></button>
+					  >{walletToggle ? <GiCheckMark /> : ""}{ walletAddress}</button>
           </div>
         </div>
       </header>
@@ -903,7 +924,10 @@ function App() {
           ))}
         <div class="container">
           <StyledLogo src={logo} />
-        </div>
+			  </div>
+			  
+			  <div className="" id="after-mint-message"></div>  {/* Box for message notification after wallet connect */}
+
         <div
           class="containermain"
           style={{
