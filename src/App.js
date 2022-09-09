@@ -852,7 +852,7 @@ const updateConnectStatus = async () => {
   const onboarding = new MetaMaskOnboarding();
   const onboardButton = document.getElementById("connectWallet");
   if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-    // onboardButton.innerText = "CONNECT WALLET ";
+    onboardButton.innerText = "CONNECT WALLET ";
     onboardButton.onclick = () => {
       onboardButton.innerText = "Connecting...";
       onboardButton.disabled = true;
