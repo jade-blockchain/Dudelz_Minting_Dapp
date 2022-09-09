@@ -880,6 +880,7 @@ const updateConnectStatus = async () => {
     };
   }
 };
+}
 
 async function checkChain() {
   let chainId = 0;
@@ -933,7 +934,6 @@ async function checkChain() {
       }
     }
   }
-}
 }
 
 async function mint() {
