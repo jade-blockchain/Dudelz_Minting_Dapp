@@ -479,8 +479,8 @@ header .containerheader {
     padding-top: 5px;
     vertical-align: text-bottom;
     height: 50px;
-    animation:message-response 5s 1;
-    -webkit-animation:message-response 5s 1;
+    animation:message-response 10s 1;
+    -webkit-animation:message-response 10s 1;
     animation-fill-mode: forwards;
     border-radius: 25px;
 

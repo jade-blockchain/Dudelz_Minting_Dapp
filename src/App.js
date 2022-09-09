@@ -11,6 +11,7 @@ import Web3 from "web3";
 import "./App.css";
 import logo from "./images/Dudelz_logo.png";
 import logosmall from "./images/BHL_Logo_Vector.svg";
+import footerlogo from "./images/upcomingnft-maillogo-b.png";
 import Timer from "./timer";
 import DefaultTimer from "./defaultTimer";
 export const StyledLogo = styled.img`
@@ -989,6 +990,9 @@ function App() {
           </div>
         </div>
       </section>
+	  <div class="footerlogo">
+	  		<img class="footerlogo" src={footerlogo} alt="footerlogo" />
+	  </div>
     </body>
   );
 }
