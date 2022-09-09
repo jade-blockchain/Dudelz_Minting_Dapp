@@ -868,7 +868,7 @@ function App() {
       dispatch(fetchData(blockchain.account));
     }
   };
-
+        
   useEffect(() => {
     getData();
   }, [blockchain.account]);
@@ -912,7 +912,7 @@ function App() {
           }}
         >
           <Heading3>
-            {data.totalSupply}/{MAX_SUPPLY}
+            {data.totalSupply} / {MAX_SUPPLY}
           </Heading3>
           <div className="mint" id="mint">
             <div className="row">
