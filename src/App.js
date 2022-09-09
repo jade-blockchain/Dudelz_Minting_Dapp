@@ -895,8 +895,7 @@ function App() {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
-
-  const totalSupply = contract.methods.totalPublicMint(account).call();
+  
 
   return (
     <body>
