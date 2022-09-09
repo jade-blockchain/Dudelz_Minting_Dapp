@@ -748,6 +748,25 @@ const ABI = [
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "tokensOfOwner",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "tokenId",
 				"type": "uint256"
@@ -820,7 +839,7 @@ const ABI = [
 let account = null;
 let contract = null;
 
-const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
+const ADDRESS = "0x1719E2D1e8C985A34d1dA8D62fcb61bDEACb99BC";
 
 //Moved the connectWallet function inside App component so that state variable could be updated when wallet connected.
 /*async function connectwallet() {
@@ -895,7 +914,7 @@ function App() {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
-  
+
 
   return (
     <body>
@@ -939,7 +958,7 @@ function App() {
           }}
         >
           <Heading3>
-            {totalSupply} / {MAX_SUPPLY}
+            {data.totalSupply} / {MAX_SUPPLY}
           </Heading3>
           <div className="mint" id="mint">
             <div className="row">
