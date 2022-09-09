@@ -224,6 +224,7 @@ header .containerheader {
     border-radius: 5px;
     position: relative;
   }
+
   .wallet-btn.active::after {
     content: "";
     position: absolute;
@@ -462,4 +463,37 @@ header .containerheader {
   background: #f2f2f2;
   border-radius: 5px;
   color: #EF2F3C;
+}
+
+/* Added after-mint-message and subsequent two classes to animate the notification message after mint */
+.after-mint-message{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #fff;
+    box-shadow:  5px 5px 5px 0 #000;
+    color: #000;
+    font-size: larger;
+    font-weight: p00;
+    padding-top: 5px;
+    vertical-align: text-bottom;
+    height: 50px;
+    animation:message-response 5s 1;
+    -webkit-animation:message-response 5s 1;
+    animation-fill-mode: forwards;
+    border-radius: 25px;
+
+    animation-delay:2s;
+    -webkit-animation-delay:1s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+} 
+@keyframes message-response{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes message-response{
+    from {opacity :1;}
+    to {opacity :0;}
 }
