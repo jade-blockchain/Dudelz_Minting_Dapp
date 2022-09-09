@@ -821,16 +821,12 @@ const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
 
 async function connectwallet() {
   window.addEventListener("DOMContentLoaded", async () => {
-  if (window.ethereum) {
-    var web3 = new Web3(window.ethereum);
-    await window.ethereum.send("eth_requestAccounts");
-    var accounts = await web3.eth.getAccounts();
-    account = accounts[0];
-    contract = new web3.eth.Contract(ABI, ADDRESS);
-    checkChain();
-  } else if (window.web3) {
-    window.web3 = new Web3(window.web3.currentProvider);
-  }
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum);
+      checkChain();
+    } else if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider);
+    }
 
     if (window.web3) {
       // Check if User is already connected by retrieving the accounts
