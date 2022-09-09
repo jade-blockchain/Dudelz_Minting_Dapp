@@ -826,8 +826,56 @@ async function connectwallet() {
     var accounts = await web3.eth.getAccounts();
     account = accounts[0];
     contract = new web3.eth.Contract(ABI, ADDRESS);
+
+    if (window.web3) {
+      // Check if User is already connected by retrieving the accounts
+      await window.web3.eth.getAccounts().then(async (addr) => {
+        accounts = addr;
+      });
+    }
+  
+    updateConnectStatus();
+    if (MetaMaskOnboarding.isMetaMaskInstalled()) {
+      window.ethereum.on("accountsChanged", (newAccounts) => {
+        accounts = newAccounts;
+        updateConnectStatus();
+      });
+    }
   }
 }
+
+const updateConnectStatus = async () => {
+  const onboarding = new MetaMaskOnboarding();
+  const onboardButton = document.getElementById("connectWallet");
+  if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
+    // onboardButton.innerText = "CONNECT WALLET ";
+    onboardButton.onclick = () => {
+      onboardButton.innerText = "Connecting...";
+      onboardButton.disabled = true;
+      onboarding.startOnboarding();
+    };
+  } else if (accounts && accounts.length > 0) {
+    onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
+    window.address = accounts[0];
+    onboardButton.disabled = true;
+    onboarding.stopOnboarding();
+  } else {
+    onboardButton.innerText = "CONNECT WALLET!";
+    onboardButton.onclick = async () => {
+      await window.ethereum
+        .request({
+          method: "eth_requestAccounts",
+        })
+        .then(function (accts) {
+          onboardButton.innerText = `✔ ...${accts[0].slice(-4)}`;
+          onboardButton.disabled = true;
+          window.address = accts[0];
+          accounts = accts;
+          contract = new web3.eth.Contract(ABI, ADDRESS);
+        });
+    };
+  }
+};
 
 async function mint() {
   if (window.ethereum) {
