@@ -868,6 +868,7 @@ async function mint() {
 
 function App() {
   const MAX_SUPPLY = 500;
+  const DefaultValue = 3;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   
@@ -978,8 +979,8 @@ function App() {
                     readonly=""
                     class="form-control"
                     name="amount"
+					defaultValue={DefaultValue}
                     value={Amount}
-					defaultValue="3"
                   />
                   <div class="input-group-append">
                     <button
