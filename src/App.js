@@ -851,6 +851,7 @@ function App() {
   const MAX_SUPPLY = 500;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
+  
 
   const timer_data = { type: "default", time: "9/10/2022 11:00:00 PM" };
 
@@ -895,6 +896,8 @@ function App() {
     getData();
   }, [blockchain.account]);
 
+  const totalSupply = await contract.methods.totalPublicMint(account).call();
+
   return (
     <body>
       <header>
@@ -937,7 +940,7 @@ function App() {
           }}
         >
           <Heading3>
-            {data.totalSupply} / {MAX_SUPPLY}
+            {totalSupply} / {MAX_SUPPLY}
           </Heading3>
           <div className="mint" id="mint">
             <div className="row">
