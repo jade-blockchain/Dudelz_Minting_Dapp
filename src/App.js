@@ -1012,7 +1012,9 @@ function App() {
         </div>
       </section>
 	  <div class="footerlogo">
+	  	<a href="https://upcomingnft.net/event/dudelz-by-jojami/">
 	  		<img class="footerlogo" src={footerlogo} alt="footerlogo" />
+		</a>
 	  </div>
     </body>
   );
