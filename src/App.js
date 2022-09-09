@@ -820,12 +820,17 @@ let accounts = null;
 const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
 
 async function connectwallet() {
+  window.addEventListener("DOMContentLoaded", async () => {
   if (window.ethereum) {
     var web3 = new Web3(window.ethereum);
     await window.ethereum.send("eth_requestAccounts");
     var accounts = await web3.eth.getAccounts();
     account = accounts[0];
     contract = new web3.eth.Contract(ABI, ADDRESS);
+    checkChain();
+  } else if (window.web3) {
+    window.web3 = new Web3(window.web3.currentProvider);
+  }
 
     if (window.web3) {
       // Check if User is already connected by retrieving the accounts
@@ -841,8 +846,7 @@ async function connectwallet() {
         updateConnectStatus();
       });
     }
-  }
-}
+  });
 
 const updateConnectStatus = async () => {
   const onboarding = new MetaMaskOnboarding();
@@ -876,6 +880,61 @@ const updateConnectStatus = async () => {
     };
   }
 };
+
+async function checkChain() {
+  let chainId = 0;
+  if (chain === "rinkeby") {
+    chainId = 4;
+  } else if (chain === "ethereum") {
+    chainId = 1;
+  }
+  if (window.ethereum.networkVersion !== chainId) {
+    try {
+      await window.ethereum.request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: web3.utils.toHex(chainId) }],
+      });
+      updateConnectStatus();
+    } catch (err) {
+      // This error code indicates that the chain has not been added to MetaMask.
+      if (err.code === 4902) {
+        try {
+          if (chain === "rinkeby") {
+            await window.ethereum.request({
+              method: "wallet_addEthereumChain",
+              params: [
+                {
+                  chainName: "Rinkeby Test Network",
+                  chainId: web3.utils.toHex(chainId),
+                  nativeCurrency: { name: "ETH", decimals: 18, symbol: "ETH" },
+                  rpcUrls: [
+                    "https://rinkeby.infura.io/v3/328b63476ec347c7a7106b3053e2ee83",
+                  ],
+                },
+              ],
+            });
+          } else if (chain === "ethereum") {
+            await window.ethereum.request({
+              method: "wallet_addEthereumChain",
+              params: [
+                {
+                  chainName: "Ethereum Mainnet",
+                  chainId: web3.utils.toHex(chainId),
+                  nativeCurrency: { name: "ETH", decimals: 18, symbol: "ETH" },
+                  rpcUrls: ["https://polygon-rpc.com/"],
+                },
+              ],
+            });
+          }
+          updateConnectStatus();
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    }
+  }
+}
+}
 
 async function mint() {
   if (window.ethereum) {
