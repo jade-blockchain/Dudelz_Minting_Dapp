@@ -979,6 +979,7 @@ function App() {
                     class="form-control"
                     name="amount"
                     value={Amount}
+					defaultValue="3"
                   />
                   <div class="input-group-append">
                     <button
