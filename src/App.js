@@ -815,6 +815,7 @@ const ABI = [
 
 let account = null;
 let contract = null;
+let accounts = null;
 
 const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
 
