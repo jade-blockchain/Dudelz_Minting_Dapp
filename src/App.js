@@ -861,7 +861,7 @@ async function mint() {
     var mintRate = Number(await contract.methods.PUBLIC_SALE_PRICE().call());
 	var totalAmount = mintRate * _quantity;
 	await contract.methods.mint(_quantity).send({ from: account, value: String(totalAmount) }); // calls async here
-	afterMintMessage.innerHTML = "Congratulations, you now own a Dudelz!<br />Head to <a href='https://opensea.io/collection/dudelz-by-jojami'>https://opensea.io/collection/dudelz-by-jojami</a> to check out what who you got."; // Notification message
+	afterMintMessage.innerHTML = "Congratulations, you now own a Dudelz!<br />Head to <a href='https://opensea.io/collection/dudelz-by-jojami'>https://opensea.io/collection/dudelz-by-jojami</a> to check out who you got."; // Notification message
 	afterMintMessage.className += "after-mint-message"; // Class to animate notification message
   }
 }
