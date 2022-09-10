@@ -834,7 +834,7 @@ function App() {
   const [toggle, setToggle] = useState(false);
   const [walletToggle, setWalletToggle] = useState(false);
   const [walletAddress, setWalletAddress] = useState("Connect Wallet"); // To update button text after walletconnect
-  const [Amount, setAmount] = useState(1);
+  const [Amount, setAmount] = useState(3);
   const incrementMintAmount = () => {
     let newAmount = Amount + 1;
     if (newAmount > 10) {
