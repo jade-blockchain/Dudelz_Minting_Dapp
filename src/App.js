@@ -933,7 +933,7 @@ function App() {
           }}
         >
           <Heading3>
-            {data.totalSupply}/ Adopted
+            {data.totalSupply} Adopted
           </Heading3>
           <div className="mint" id="mint">
             <div className="row">
