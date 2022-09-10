@@ -847,7 +847,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const dispatch = useDispatch();
-  const timer_data = { type: "default", time: "9/11/2022 5:00:00 AM" };
+  const timer_data = { type: "reset", time: "9/11/2022 5:00:00 AM" };
 
   const [toggle, setToggle] = useState(false);
   const [walletToggle, setWalletToggle] = useState(false);
@@ -934,7 +934,7 @@ function App() {
       </header>
       <section>
         {timer_data &&
-          (timer_data.type == "default" ? (
+          (timer_data.type == "reset" ? (
             <DefaultTimer endTime={timer_data.time} />
           ) : (
             <Timer startTime={timer_data.time} />
