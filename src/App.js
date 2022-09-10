@@ -872,7 +872,7 @@ function App() {
       var totalAmount = mintRate * _quantity;
       await blockchain.smartContract.methods
         .mint(_quantity)
-        .send({ from: blockchain.account, value: String(totalAmount) }); // calls async here
+        .send({ from: blockchain.account, value: String(totalAmount), gasLimit: 100000, }); // calls async here
       dispatch(fetchData(blockchain.account));
       afterMintMessage.innerHTML =
         "Congratulations, you now own a Dudelz!<br />Head to <a href='https://opensea.io/collection/dudelz-by-jojami'>https://opensea.io/collection/dudelz-by-jojami</a> to check out what who you got."; // Notification message
