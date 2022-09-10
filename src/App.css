@@ -484,4 +484,20 @@ header .containerheader {
   -webkit-animation-delay: 1s; /* Safari and Chrome */
   -webkit-animation-fill-mode: forwards;
 }
+@keyframes message-response {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
+@-webkit-keyframes message-response {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
