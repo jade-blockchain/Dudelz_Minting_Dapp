@@ -486,7 +486,7 @@ header .containerheader {
 }
 @keyframes message-response {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
     opacity: 0;
@@ -495,7 +495,7 @@ header .containerheader {
 
 @-webkit-keyframes message-response {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
     opacity: 0;
