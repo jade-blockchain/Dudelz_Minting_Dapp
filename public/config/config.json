@@ -1,6 +1,6 @@
 {
     "NETWORK": {
-        "NAME": "ethereum",
+        "NAME": "ETH",
         "ID": "1"
     },
     "CONTRACT_ADDRESS": "0x831CDdfE0073D4305C808d2e7925D73F1092f5da"
