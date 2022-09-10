@@ -31,6 +31,13 @@ const updateAccountRequest = (payload) => {
   };
 };
 
+export const updateAccount = (account) => {
+  return async (dispatch) => {
+    dispatch(updateAccountRequest({ account: account }));
+    dispatch(fetchData(account));
+  };
+};
+
 export const connect = () => {
   return async (dispatch) => {
     dispatch(connectRequest());
@@ -62,7 +69,7 @@ export const connect = () => {
         });
         if (networkId == CONFIG.NETWORK.ID) {
           const SmartContractObj = new Web3EthContract(
-            abi,
+            abi.abi,
             CONFIG.CONTRACT_ADDRESS
           );
           dispatch(
@@ -89,12 +96,5 @@ export const connect = () => {
     } else {
       dispatch(connectFailed("Install Metamask."));
     }
-  };
-};
-
-export const updateAccount = (account) => {
-  return async (dispatch) => {
-    dispatch(updateAccountRequest({ account: account }));
-    dispatch(fetchData(account));
   };
 };

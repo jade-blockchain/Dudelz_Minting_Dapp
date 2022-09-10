@@ -1,5 +1,5 @@
 body {
-  background-image: url('images/BG.png');
+  background-image: url("images/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11,7 +11,6 @@ section {
   background-position: top center;
   background-repeat: no-repeat;
   height: 100vh;
-  
 }
 
 /* HEADER */
@@ -25,7 +24,7 @@ header::after {
   width: 100vw;
   height: 30px;
   left: 0;
-  top:45px;
+  top: 45px;
   background: rgb(236, 88, 89);
 }
 
@@ -64,17 +63,16 @@ header .containerheader {
   height: 64px;
 }
 
-
 /* BODY */
 
 .mint {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
 }
 
 .container {
@@ -89,249 +87,247 @@ header .containerheader {
 
 .containermain {
   background-color: rgba(255, 255, 255, 0.85);
-    align-items: center;
-    justify-content: center;
-    max-width: 360px;
-    height: auto;
-    left: 50%;
-    transform: translate(-390px, 0);
-    position: absolute;
-    top: 340px;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+  height: auto;
+  left: 50%;
+  transform: translate(-390px, 0);
+  position: absolute;
+  top: 340px;
 }
 
 /* MINT SPINNER */
 
 .mint-spinner {
+  width: 100%;
+  max-width: 420px;
+  max-height: auto;
+  border-radius: 10px;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.mint-spinner .input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mint-spinner .input-group-append,
+.mint-spinner .input-group-prepend {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: rgb(235, 10, 140);
+  box-shadow: 5px 5px 5px 0 #000;
+  border: 2px solid #000;
+  border: 2px solid #000;
+  transition: all 0.3s ease-out;
+}
+
+.mint-spinner .input-group-prepend button {
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 118px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin-top: -50px;
+  background: transparent;
+  font-weight: 500;
+
+  transition: all 0.3s ease-out;
+}
+.mint-spinner .input-group-append button {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 75px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  margin-top: -15px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.mint-spinner .form-control {
+  text-align: center;
+  color: #000;
+  border: 2px solid black;
+  font-size: 40px;
+  box-shadow: none;
+  width: 160px;
+  margin: 0 15px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: flex;
+  background: rgb(235, 10, 140);
+  color: #ffffff;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: var(--header-shadow);
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+.price-eth {
+  font-size: 28px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: -5px;
+  font-weight: 300;
+}
+.price-eth .bold {
+  font-weight: 600;
+  color: rgb(219, 51, 125);
+}
+.wallet-btn {
+  background-image: url("images/ConnectUp.png");
+  background-position-x: -1px;
+  background-position-y: -1px;
+  background-size: 101%;
+  width: 129px;
+  height: 46px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border: none;
+  border-radius: 0 9px 0 0;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  font-family: Ultraquick;
+}
+.wallet-btn.active {
+  background-image: none;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-size: 100%;
+  background-color: rgb(235, 10, 140);
+  border: 2px solid #000;
+  border-radius: 5px;
+  position: relative;
+}
+
+.wallet-btn.active::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 27px;
+  height: 42px;
+  top: 0;
+  left: 21px;
+  transform: skewX(-25deg);
+}
+.wallet-btn.active::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 5px;
+  height: 42px;
+  top: 0;
+  left: 55px;
+  transform: skewX(-25deg);
+}
+.mint-btn {
+  background-image: url("images/MintUp.png");
+  background-position-x: 0px;
+  border: none;
+  border-radius: 0 0 0 0;
+  background-size: cover;
+  color: white;
+  height: 63px;
+  font-family: Ultraquick;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+  width: 180px;
+  cursor: pointer;
+  position: relative;
+  cursor: pointer;
+}
+.mint-btn.active {
+  background-image: url("images/MintDown.png");
+  background-size: 100%;
+  background-position-x: initial;
+  background-position-y: -2px;
+  border-radius: 0 0 0 0;
+}
+
+.elPkvL {
+  width: 600px;
+  z-index: 99999 !important;
+  margin: 0 auto;
+}
+
+.jSNuTb {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 30px !important;
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 40px !important;
+  display: block;
+  margin-bottom: 0 !important;
+}
+
+@font-face {
+  font-family: "Ultraquick";
+  src: local("UltraQuick"), url(./fonts/Ultraquick-yw3re.ttf) format("truetype");
+}
+
+/* MEDIA QUERIES*/
+
+@media screen and (max-width: 1080px) {
+  section {
+    height: 100vh;
+    background-position: center center;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  header::after {
+    top: 47px;
+  }
+  .container {
+    padding: 2rem;
+  }
+  .mint-spinner {
     width: 100%;
-    max-width: 420px;
-    max-height: auto;
-    border-radius: 10px;
-    background: transparent;
-    margin: 0 auto;
-  }
-  
-  .mint-spinner .input-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .mint-spinner .input-group-append,
-  .mint-spinner .input-group-prepend {
-    width: 60px;
-    height: 60px;
-   border-radius: 100%;
-   background-color: rgb(235, 10, 140);
-    box-shadow:  5px 5px 5px 0 #000;
-   border: 2px solid #000;
-   border: 2px solid #000;
-     transition: all 0.3s ease-out;
-    
-  }
-
-  .mint-spinner .input-group-prepend button {
-     font-size: 30px;
-     cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-size: 118px;
-    width: 100%;
-    height: 100%;
-    border: none;
-    margin-top: -50px;
-    background: transparent;
-    font-weight: 500;
-    
-    transition: all 0.3s ease-out;
-  }
-  .mint-spinner .input-group-append button {
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    font-size: 75px;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: transparent;
-    font-weight: 700;
-    margin-top: -15px;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
-  }
-   .mint-spinner .form-control {
-    text-align: center;
-      color: #000;
-      border: 2px solid black;
-      font-size: 40px;
-      box-shadow: none;
-      width: 160px;
-      margin: 0 15px;
-  }
-
-  /* BUTTONS */
-
-  .btn {
-    display: flex;
-    background: rgb(235, 10, 140);
-    color: #ffffff;
-    font-family: var(--font-secondary);
-    font-size: 1rem;
-    text-align: center;
-    text-transform: capitalize;
-    transition: all 0.3s ease;
-    box-shadow: var(--header-shadow);
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-    border-radius: 5px;
-  }
-
-  .btn:disabled {
-    cursor: default;
-  }
-  .price-eth {
-    font-size: 28px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: -5px;
-    font-weight: 300;
-  }
-  .price-eth .bold {
-    font-weight: 600;
-    color: rgb(219,51,125);
+    max-width: 100%;
   }
   .wallet-btn {
-    background-image: url("images/ConnectUp.png");
-    background-position-x: -1px;
-    background-position-y: -1px;
-    background-size: 101%;
-    width: 129px;
-    height: 46px;
-    cursor: pointer;
-    transition: all 0.3s linear;
-    border: none;
-    border-radius: 0 9px 0 0;
-    font-size: 18px;
-    color: white;
-    font-weight:500;
-    font-family: Ultraquick;
+    margin-left: 0;
+    padding: 0;
+    max-width: 8rem;
+    letter-spacing: 0;
   }
-  .wallet-btn.active {
-    background-image: none;
-    background-position-x: 0;
-    background-position-y: 0;
-    background-size: 100%;
-    background-color: rgb(235, 10, 140);
-    border: 2px solid #000;
-    border-radius: 5px;
-    position: relative;
-  }
-
-  .wallet-btn.active::after {
-    content: "";
-    position: absolute;
-    background: rgba(255, 255, 255, 0.5);
-    width: 27px;
-    height: 42px;
-    top:0;
-    left: 21px;
-    transform: skewX(-25deg);
-  }
-  .wallet-btn.active::before {
-    content: "";
-    position: absolute;
-    background: rgba(255, 255, 255, 0.5);
-    width: 5px;
-    height: 42px;
-    top:0;
-    left: 55px;
-    transform: skewX(-25deg);
-  }
-  .mint-btn {
-     background-image: url('images/MintUp.png');
-     background-position-x: 0px;
-     border: none;
-     border-radius: 0 0 0 0;
-     background-size: cover;
-      color: white;
-      height: 63px;
-      font-family: Ultraquick;
-      text-align: center;
-      padding: 0;
-      margin:auto;
-      width: 180px;
-      cursor: pointer;
-      position: relative;
-      cursor: pointer;
-  }
-  .mint-btn.active {
-     background-image: url('images/MintDown.png');
-     background-size: 100%;
-     background-position-x: initial;
-    background-position-y: -2px;
-    border-radius: 0 0 0 0;
+  header .containerheader {
+    gap: 0;
   }
 
   .elPkvL {
-    width: 600px;
-    z-index: 99999 !important;
-    margin: 0 auto;
-
+    width: 75% !important;
+    top: 144px;
+    left: 10%;
   }
-
-.jSNuTb {
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 30px !important;
-    font-weight: 900;
-    text-align: center;
-    padding-bottom: 40px!important;
-    display: block;
-    margin-bottom: 0!important;
-}
-
-  @font-face {
-    font-family: 'Ultraquick';
-    src: local('UltraQuick'), url(./fonts/Ultraquick-yw3re.ttf) format('truetype');
+  .jSNuTb {
+    font-size: 30pt !important;
   }
-
-  /* MEDIA QUERIES*/
-
-  @media screen and (max-width: 1080px) {
-    section {
-      height: 100vh;
-      background-position: center center;
-    }
-  }
-
-  @media screen and (max-width: 760px) {
-    header::after {
-      top: 47px;
-    }
-    .container {
-      padding: 2rem;
-    }
-    .mint-spinner {
-      width: 100%;
-      max-width: 100%;
-    }
-    .wallet-btn {
-      margin-left: 0;
-      padding: 0;
-      max-width: 8rem;
-      letter-spacing: 0;
-    }
-    header .containerheader {
-        gap: 0;
-    }
-  
-    .elPkvL {
-        width: 75% !important;
-        top: 144px;
-        left: 10%;
-    }
-    .jSNuTb {
-      font-size: 30pt !important;
-    }
 }
 
 .timer {
@@ -339,33 +335,30 @@ header .containerheader {
   position: absolute;
   left: 50%;
   transform: translate(-100%, 0);
-  top:225px;
+  top: 225px;
 }
- @media screen and (max-width: 860px) {
-    .timer {
+@media screen and (max-width: 860px) {
+  .timer {
     top: 260px;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
   }
   .containermain {
     top: 400px;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
   }
-  }
+}
 @media screen and (max-width: 768px) {
-  
-    
 }
 @media screen and (max-width: 500px) {
   .containermain {
     top: 350px;
     width: 325px;
-
   }
 }
 .box-d {
-  background:  rgb(160, 70, 230);
+  background: rgb(160, 70, 230);
   width: 95px;
   height: 90px;
   margin: 0 6px;
@@ -373,7 +366,7 @@ header .containerheader {
 }
 
 .box-h {
-  background:  rgb(255, 50, 113);
+  background: rgb(255, 50, 113);
   width: 95px;
   height: 90px;
   margin: 0 6px;
@@ -381,10 +374,10 @@ header .containerheader {
 }
 .box-m {
   background: rgb(58, 136, 216);
-   width: 95px;
+  width: 95px;
   height: 90px;
-    margin: 0 6px;
-     border-radius: 8px;
+  margin: 0 6px;
+  border-radius: 8px;
 }
 .box-s {
   background: rgb(241, 191, 28);
@@ -394,10 +387,13 @@ header .containerheader {
   border-radius: 8px;
 }
 @media screen and (max-width: 500px) {
-  .box-d, .box-h, .box-m, .box-s {
+  .box-d,
+  .box-h,
+  .box-m,
+  .box-s {
     width: 65px;
     height: 55px;
-  } 
+  }
 }
 .box-num {
   font-size: 30px;
@@ -407,12 +403,11 @@ header .containerheader {
   color: #183059;
   padding: 18px 0 3px 0;
 }
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 500px) {
   .box-num {
     font-size: 20px;
     padding: 11px 0 2px 0;
   }
-  
 }
 .box-title-d {
   font-size: 10px;
@@ -420,7 +415,6 @@ header .containerheader {
   color: black;
   text-align: center;
   display: block;
-  
 }
 .box-title-h {
   font-size: 10px;
@@ -428,7 +422,6 @@ header .containerheader {
   color: black;
   text-align: center;
   display: block;
-  
 }
 .box-title-m {
   font-size: 10px;
@@ -445,7 +438,10 @@ header .containerheader {
   display: block;
 }
 @media screen and (max-width: 500px) {
-  .box-title-d, .box-title-h, .box-title-m, .box-title-s {
+  .box-title-d,
+  .box-title-h,
+  .box-title-m,
+  .box-title-s {
     font-size: 9px;
   }
 }
@@ -459,41 +455,49 @@ header .containerheader {
   left: 20px;
   top: 0px;
   font-size: 25px;
-  border: 2px solid #EF2F3C;
+  border: 2px solid #ef2f3c;
   background: #f2f2f2;
   border-radius: 5px;
-  color: #EF2F3C;
+  color: #ef2f3c;
 }
 
 /* Added after-mint-message and subsequent two classes to animate the notification message after mint */
-.after-mint-message{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background-color: #fff;
-    box-shadow:  5px 5px 5px 0 #000;
-    color: #000;
-    font-size: larger;
-    font-weight: p00;
-    padding-top: 5px;
-    vertical-align: text-bottom;
-    height: 50px;
-    animation:message-response 50s 1;
-    -webkit-animation:message-response 50s 1;
-    animation-fill-mode: forwards;
-    border-radius: 25px;
+.after-mint-message {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0 #000;
+  color: #000;
+  font-size: larger;
+  font-weight: p00;
+  padding-top: 5px;
+  vertical-align: text-bottom;
+  height: 50px;
+  animation: message-response 50s 1;
+  -webkit-animation: message-response 50s 1;
+  animation-fill-mode: forwards;
+  border-radius: 25px;
 
-    animation-delay:2s;
-    -webkit-animation-delay:1s; /* Safari and Chrome */
-    -webkit-animation-fill-mode: forwards;
-} 
-@keyframes message-response{
-    from {opacity :1;}
-    to {opacity :0;}
+  animation-delay: 2s;
+  -webkit-animation-delay: 1s; /* Safari and Chrome */
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes message-response {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
-@-webkit-keyframes message-response{
-    from {opacity :1;}
-    to {opacity :0;}
+@-webkit-keyframes message-response {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
