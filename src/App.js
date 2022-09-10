@@ -64,7 +64,7 @@ export const Heading4 = styled.h1`
   padding-bottom: 0rem;
 `;
 
-/*const ABI = [
+const ABI = [
   {
     inputs: [],
     stateMutability: "nonpayable",
@@ -822,7 +822,6 @@ let account = null;
 let contract = null;
 
 const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
-*/
 
 function App() {
   const blockchain = useSelector((state) => state.blockchain);
