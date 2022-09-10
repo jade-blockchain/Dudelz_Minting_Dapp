@@ -825,7 +825,7 @@ const ADDRESS = "0x879754ee0B08149Fbe2B181522215b28010c2e2e";
 */
 
 function App() {
-  const MAX_SUPPLY = 500;
+  const MAX_SUPPLY = Adopted;
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const dispatch = useDispatch();
