@@ -934,7 +934,7 @@ function App() {
       </header>
       <section>
         {timer_data &&
-          (timer_data.type == "reset" ? (
+          (timer_data.type == "default" ? (
             <DefaultTimer endTime={timer_data.time} />
           ) : (
             <Timer startTime={timer_data.time} />
