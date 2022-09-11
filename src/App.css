@@ -485,6 +485,7 @@ header .containerheader {
   height: 400px;
   border-radius: 25px;
   position: absolute;
+  overflow-wrap: break-word;
 }
 @keyframes message-response {
   from {
