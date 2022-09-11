@@ -466,9 +466,9 @@ header .containerheader {
 
 /* Added after-mint-message and subsequent two classes to animate the notification message after mint */
 .after-mint-message {
-  width: 45%;
+  width: 30%;
   margin-top: 100px;
-  margin-left: 200px;
+  margin-right: 200px;
   margin-right: auto;
   text-align: center;
   background-color: #fff;
