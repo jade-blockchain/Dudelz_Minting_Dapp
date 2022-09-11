@@ -115,17 +115,7 @@ header .containerheader {
   align-items: center;
 }
 
-.mint-spinner .input-group-append,
-.mint-spinner .input-group-prepend {
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  background-color: rgb(235, 10, 140);
-  box-shadow: 5px 5px 5px 0 #000;
-  border: 2px solid #000;
-  border: 2px solid #000;
-  transition: all 0.3s ease-out;
-}
+
 
 .mint-spinner .input-group-prepend button {
   font-size: 30px;
