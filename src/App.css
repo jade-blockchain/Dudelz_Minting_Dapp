@@ -141,7 +141,7 @@ header .containerheader {
   border: none;
   background: transparent;
   font-weight: 700;
-  margin-top: 0px;
+  margin-top: -5px;
   transition: all 0.3s ease-out;
   cursor: pointer;
   vertical-align: middle;
