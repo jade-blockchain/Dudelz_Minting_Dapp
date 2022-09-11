@@ -13,6 +13,8 @@ import "./App.css";
 import logo from "./images/Dudelz_logo.png";
 import logosmall from "./images/BHL_Logo_Vector.svg";
 import footerlogo from "./images/upcomingnft-maillogo-b.png";
+import minusbutton from "./images/Minus_Up.png";
+import plusbutton from "./images/Plus_Up.png"
 import Timer from "./timer";
 import DefaultTimer from "./defaultTimer";
 export const StyledLogo = styled.img`
@@ -965,7 +967,7 @@ function App() {
                       type="button"
                       onClick={decrementMintAmount}
                     >
-                      -
+                      <img class="minus" src={minusbutton} width="60px" height="60px" />
                     </button>
                   </div>
                   <input
@@ -980,7 +982,7 @@ function App() {
                       type="button"
                       onClick={incrementMintAmount}
                     >
-                      +
+                      <img class="plus" src={plusbutton} width="60px" height="60px" />
                     </button>
                   </div>
                 </div>
