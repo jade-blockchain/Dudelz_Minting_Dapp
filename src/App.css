@@ -139,6 +139,7 @@ header .containerheader {
   background: transparent;
   font-weight: 500;
   justify-content: center;
+  position: absolute;
 
   transition: all 0.3s ease-out;
 }
@@ -155,6 +156,7 @@ header .containerheader {
   transition: all 0.3s ease-out;
   cursor: pointer;
   justify-content: center;
+  position: absolute;
 }
 .mint-spinner .form-control {
   text-align: center;
