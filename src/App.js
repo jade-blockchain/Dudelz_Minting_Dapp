@@ -870,9 +870,11 @@ function App() {
         await blockchain.smartContract.methods.PUBLIC_SALE_PRICE().call()
       );
       var totalAmount = mintRate * _quantity;
-      await blockchain.smartContract.methods
-        .mint(_quantity)
-        .send({ from: blockchain.account, value: String(totalAmount), gasLimit: 180000, }); // calls async here
+      await blockchain.smartContract.methods.mint(_quantity).send({
+        from: blockchain.account,
+        value: String(totalAmount),
+        gasLimit: 180000,
+      }); // calls async here
       dispatch(fetchData(blockchain.account));
       afterMintMessage.innerHTML =
         "Congratulations, you now own a Dudelz!<br />Head to <a href='https://opensea.io/collection/dudelz-by-jojami'>https://opensea.io/collection/dudelz-by-jojami</a> to check out what who you got."; // Notification message
@@ -951,9 +953,7 @@ function App() {
             borderRadius: 0,
           }}
         >
-          <Heading3>
-            {data.totalSupply} Adopted
-          </Heading3>
+          <Heading3>{data.totalSupply} Adopted</Heading3>
           <div className="mint" id="mint">
             <div className="row">
               {/* <form className="col-lg-30 mt-3"> */}
