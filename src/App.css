@@ -454,6 +454,9 @@ header .containerheader {
   .mint-spinner .input-group-append button {
     vertical-align: middle;
   }
+  .price-eth {
+    letter-spacing: 0px;
+  }
 }
 
 .time-container {
