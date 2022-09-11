@@ -329,24 +329,16 @@ header .containerheader {
   transform: translate(-100%, 0);
   top: 225px;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 840px) {
   .timer {
     top: 260px;
     left: 50%;
     transform: translate(-50%, 0);
   }
   .containermain {
-    top: 400px;
+    top: 300px;
     left: 50%;
     transform: translate(-50%, 0);
-  }
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 500px) {
-  .containermain {
-    top: 350px;
-    width: 325px;
   }
 }
 .box-d {
@@ -466,27 +458,56 @@ header .containerheader {
 
 /* Added after-mint-message and subsequent two classes to animate the notification message after mint */
 .after-mint-message {
-  width: 50%;
-  margin-left: auto;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-left: 50%;
   margin-right: auto;
   text-align: center;
   background-color: #fff;
   box-shadow: 5px 5px 5px 0 #000;
   color: #000;
-  font-size: larger;
+  font-family: "Ultraquick";
+  font-size: 25pt;
   font-weight: p00;
-  padding-top: 5px;
-  vertical-align: text-bottom;
-  height: 50px;
-  animation: message-response 50s 1;
-  -webkit-animation: message-response 50s 1;
-  animation-fill-mode: forwards;
+  padding: 30px!important;
+  height: auto;
   border-radius: 25px;
-
-  animation-delay: 2s;
-  -webkit-animation-delay: 1s; /* Safari and Chrome */
-  -webkit-animation-fill-mode: forwards;
+  position: absolute;
+  overflow-wrap: break-word;
 }
+
+@media screen and (max-width: 840px) {
+  .containermain {
+    top: 450px;
+    z-index: 100;
+  }
+
+  .after-mint-message {
+    z-index: 999;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 40px!important;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 0 #000;
+    color: #000;
+    font-family: "Ultraquick";
+    font-size: 14pt;
+    font-weight: p00;
+    padding: 20px;
+    height: auto;
+    border-radius: 25px;
+    overflow-wrap: break-word;
+  }
+
+  .footerlogo {
+    display: none;
+  }
+}
+
 @keyframes message-response {
   from {
     opacity: 1;
