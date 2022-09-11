@@ -190,7 +190,7 @@ header .containerheader {
 .price-eth {
   font-size: 28px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: -5px;
+  letter-spacing: -3px;
   font-weight: 300;
 }
 .price-eth .bold {
@@ -455,7 +455,7 @@ header .containerheader {
     vertical-align: middle;
   }
   .price-eth {
-    letter-spacing: -2px;
+    letter-spacing: 0px;
   }
 }
 
