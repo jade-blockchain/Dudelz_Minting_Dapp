@@ -139,7 +139,7 @@ header .containerheader {
   background: transparent;
   font-weight: 500;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 
   transition: all 0.3s ease-out;
 }
@@ -156,7 +156,7 @@ header .containerheader {
   transition: all 0.3s ease-out;
   cursor: pointer;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 .mint-spinner .form-control {
   text-align: center;
