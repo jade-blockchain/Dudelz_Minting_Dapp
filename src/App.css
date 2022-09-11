@@ -438,7 +438,7 @@ header .containerheader {
   }
 
   .mint-spinner .input-group-prepend button {
-    margin-top: -30px;
+    margin-top: -15px;
     vertical-align: middle !important;
   }
   .mint-spinner .input-group-append button {
