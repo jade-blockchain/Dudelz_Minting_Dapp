@@ -446,6 +446,10 @@ header .containerheader {
   .box-title-s {
     font-size: 9px;
   }
+
+  .mint-spinner .input-group-prepend button {
+    margin-top: -70px;
+  }
 }
 
 .time-container {
