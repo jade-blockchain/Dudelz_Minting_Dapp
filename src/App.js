@@ -879,7 +879,7 @@ function App() {
       }); // calls async here
       dispatch(fetchData(blockchain.account));
       afterMintMessage.innerHTML =
-        "Congratulations, you now own a Dudelz!<br />Head to <a href='https://opensea.io/collection/dudelz-by-jojami'>https://opensea.io/collection/dudelz-by-jojami</a> to check out who you got."; // Notification message
+        "Congratulations, you now own a Dudelz! Head to <br /><a href='https://opensea.io/collection/dudelz-by-jojami'>https://opensea.io/collection/dudelz-by-jojami</a> to check out who you got."; // Notification message
       afterMintMessage.className += "after-mint-message"; // Class to animate notification message
     }
   }
