@@ -849,7 +849,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const dispatch = useDispatch();
-  const timer_data = { type: "reset", time: "9/12/2022 5:00:00 AM" };
+  /*const timer_data = { type: "reset", time: "9/12/2022 5:00:00 AM" };*/
 
   const [toggle, setToggle] = useState(false);
   const [walletToggle, setWalletToggle] = useState(false);
@@ -955,7 +955,7 @@ function App() {
             borderRadius: 0,
           }}
         >
-          <Heading3>{data.totalSupply} Adopted</Heading3>
+          <Heading3>CLOSED SOLD OUT</Heading3>
           <div className="mint" id="mint">
             <div className="row">
               {/* <form className="col-lg-30 mt-3"> */}
